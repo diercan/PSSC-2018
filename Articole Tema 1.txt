@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/SOLID
+https://williamdurand.fr/2013/07/30/from-stupid-to-solid-code/
+https://hackernoon.com/solid-principles-made-easy-67b1246bcdf
