@@ -1,0 +1,3 @@
+http://web.cs.iastate.edu/~prabhu/Tutorial/PIPELINE/pipe_title.html
+https://ro.wikipedia.org/wiki/Pipeline
+https://www.studytonight.com/computer-architecture/pipelining
