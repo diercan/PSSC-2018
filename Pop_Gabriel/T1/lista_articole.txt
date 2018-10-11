@@ -1,0 +1,3 @@
+https://martinfowler.com/bliki/DDD_Aggregate.html
+https://deviq.com/value-object/
+https://lostechies.com/…/entities-value-objects-aggregates…/
