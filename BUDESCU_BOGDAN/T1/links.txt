@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+https://realtimeapi.io/hub/publishsubscribe-pattern/
+https://msdn.microsoft.com/en-us/magazine/hh201955.aspx
