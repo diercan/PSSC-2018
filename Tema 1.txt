@@ -1,3 +1,0 @@
-https://alanbarber.com/2015/08/06/solid-principles-five-principles-of-objectoriented-programming-and-design/
-https://deviq.com/solid/
-https://stackify.com/dependency-inversion-principle/
