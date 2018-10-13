@@ -1,0 +1,3 @@
+https://www.techopedia.com/definition/438/clientserver-architecture
+https://www.techwalla.com/articles/components-of-a-client-server-network
+https://www.resilio.com/blog/whats-the-difference-between-peer-to-peer-and-client-server
