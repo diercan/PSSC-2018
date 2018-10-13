@@ -1,0 +1,3 @@
+https://rubygarage.org/blog/solid-principles-of-ood
+https://blog.ndepend.com/defense-solid-principles/
+https://hackernoon.com/solid-principles-made-easy-67b1246bcdf
