@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Three-tier_system_(alcohol_distribution)
+https://ro.wikipedia.org/wiki/Model-view-controller
+https://en.wikipedia.org/wiki/Actuator
