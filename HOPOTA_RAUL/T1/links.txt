@@ -1,0 +1,3 @@
+https://medium.com/mindorks/solid-principles-explained-with-examples-79d1ce114ace
+https://rubygarage.org/blog/solid-principles-of-ood
+https://blog.ndepend.com/defense-solid-principles/
