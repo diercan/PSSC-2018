@@ -1,0 +1,12 @@
+﻿Tema 1 - Szabo Agota-Hella
+1. PHP UK Conference 2017 - Gareth Ellis - Introduction to SOLID
+https://www.youtube.com/watch?v=86Tt2pW9pv4
+
+2. DDD 101 — The 5-Minute Tour
+https://medium.com/the-coding-matrix/ddd-101-the-5-minute-tour-7a3037cf53b8
+
+3. Soft arch. style/patterns
+https://towardsdatascience.com/10-common-software-architectural-patterns-in-a-nutshell-a0b47a1e9013
+
+Ceva interesant in plus:
+Bob Martin SOLID Principles of Object Oriented and Agile Design => https://www.youtube.com/watch?v=TMuno5RZNeE
