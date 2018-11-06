@@ -1,0 +1,5 @@
+https://dev.to/barryosull/event-sourcing-what-it-is-and-why-its-awesome
+https://dzone.com/articles/event-sourcing-and-blockchain
+https://martinfowler.com/eaaDev/EventSourcing.html
+
+
