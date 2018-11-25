@@ -1,0 +1,3 @@
+https://www.culttt.com/2014/12/24/factories-domain-driven-design/
+https://herbertograca.com/2015/10/04/domain-driven-design-by-eric-evans-chap-6-the-lifecycle-of-a-domain-object/
+https://refactoring.guru/replace-constructor-with-factory-method
