@@ -1,0 +1,7 @@
+TEMA 2 PSSC - TEUSDEA Paul
+
+https://martinfowler.com/eaaDev/DomainEvent.html
+
+https://docs.microsoft.com/…/domain-events-design-implement…
+
+http://verraes.net/2014/11/domain-events/
