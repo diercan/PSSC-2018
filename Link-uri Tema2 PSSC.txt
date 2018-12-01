@@ -1,0 +1,3 @@
+https://blogs.msdn.microsoft.com/mcsuksoldev/2010/04/28/managed-extensibility-framework-overview/
+https://docs.microsoft.com/en-us/dotnet/framework/mef/
+https://www.todaysoftmag.com/article/1958/designing-complex-net-systems-using-managed-extensibility-framework
