@@ -1,0 +1,3 @@
+http://www.tutorialsteacher.com/ioc/ioc-container
+https://en.wikipedia.org/wiki/Inversion_of_control
+http://joelabrahamsson.com/inversion-of-control-an-introduction-with-examples-in-net/ 
