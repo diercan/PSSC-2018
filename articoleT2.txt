@@ -1,0 +1,5 @@
+https://sookocheff.com/post/architecture/what-is-cqrs/
+
+https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
+
+https://www.codeproject.com/Articles/555855/Introduction-to-CQRS
