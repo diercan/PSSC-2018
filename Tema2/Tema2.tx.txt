@@ -1,7 +1,0 @@
-https://www.culttt.com/2014/12/24/factories-domain-driven-design/
-
-https://herbertograca.com/2015/10/04/domain-driven-design-by-eric-evans-chap-6-the-lifecycle-of-a-domain-object/
-
-https://refactoring.guru/design-patterns/abstract-factory
-
-https://medium.com/withbetterco/using-aggregates-and-factories-in-domain-driven-design-34e0dff220c3
