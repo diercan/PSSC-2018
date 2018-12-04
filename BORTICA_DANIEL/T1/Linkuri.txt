@@ -1,0 +1,5 @@
+http://www.blackwasp.co.uk/SOLID.aspx
+
+https://dzone.com/articles/solid-design-principles-explained-dependency-inver
+
+https://hackernoon.com/solid-principles-made-easy-67b1246bcdf
