@@ -1,0 +1,5 @@
+https://docs.microsoft.com/en-us/dotnet/standard/microservices-architecture/microservice-ddd-cqrs-patterns/domain-events-design-implementation
+
+https://martinfowler.com/eaaDev/DomainEvent.html
+
+https://enterprisecraftsmanship.com/2017/10/03/domain-events-simple-and-reliable-solution/
