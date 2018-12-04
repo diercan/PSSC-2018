@@ -1,0 +1,3 @@
+https://pehapkari.cz/blog/2018/02/28/domain-driven-design-repository/
+https://lostechies.com/jimmybogard/2009/09/03/ddd-repository-implementation-patterns/
+https://blog.fedecarg.com/2009/03/15/domain-driven-design-the-repository/
