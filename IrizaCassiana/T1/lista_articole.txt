@@ -1,0 +1,3 @@
+https://www.ibm.com/support/knowledgecenter/en/SSEQTP_8.5.5/com.ibm.websphere.base.doc/ae/covr_3-tier.html
+https://www.jinfonet.com/resources/bi-defined/3-tier-architecture-complete-overview/
+https://alitarhini.wordpress.com/2011/01/22/concepts-of-three-tier-architecture/
