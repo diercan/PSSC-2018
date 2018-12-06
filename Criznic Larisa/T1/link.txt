@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/SOLID
+https://ctrl-d.ro/…/programarea-orientata-pe-obiect-si-dez…/
+http://www.cs.ubbcluj.ro/~ilazar/iss/curs09.pdf

@@ -1,0 +1,3 @@
+https://en.wikipedia.org/wiki/Command%E2%80%93query_separation
+https://docs.microsoft.com/en-us/azure/architecture/patterns/cqrs
+https://www.todaysoftmag.ro/article/676/command-query-responsibility-segregation
