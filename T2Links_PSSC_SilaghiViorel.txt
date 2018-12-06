@@ -1,3 +1,0 @@
-https://martinfowler.com/eaaDev/EventSourcing.html
-https://microservices.io/patterns/data/event-sourcing.html
-https://eventuate.io/whyeventsourcing.html
