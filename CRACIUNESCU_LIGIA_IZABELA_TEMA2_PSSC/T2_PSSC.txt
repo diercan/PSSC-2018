@@ -1,0 +1,3 @@
+https://www.todaysoftmag.ro/article/676/command-query-responsibility-segregation#h1
+https://martinfowler.com/bliki/CQRS.html
+https://cqrs.files.wordpress.com/2010/11/cqrs_documents.pdf
