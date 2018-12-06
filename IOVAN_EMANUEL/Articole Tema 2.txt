@@ -1,0 +1,4 @@
+https://www.cleverism.com/how-to-build-service-oriented-architecture-soa/
+https://www.ibm.com/support/knowledgecenter/en/SSMQ79_9.5.1/com.ibm.egl.pg.doc/topics/pegl_serv_overview.html
+https://www.cisco.com/E-Learning/quickstart/data_center/cdc_bulk/Additional_Resources/resources/service-oriented_infrastructure_white_paper.pdf
+https://www.ibm.com/developerworks/library/ws-soa-design1/
