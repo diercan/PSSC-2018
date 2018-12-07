@@ -1,0 +1,3 @@
+https://deviq.com/aggregate-pattern/
+https://www.culttt.com/2014/12/17/aggregates-domain-driven-design/
+https://lostechies.com/gabrielschenker/2015/05/25/ddd-the-aggregate/
