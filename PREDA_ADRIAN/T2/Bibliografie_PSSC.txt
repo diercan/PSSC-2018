@@ -1,0 +1,3 @@
+https://www.todaysoftmag.ro/article/1939/proiectarea-sistemelor-net-complexe-cu-managed-extensibility-framework
+https://msdn.microsoft.com/en-us/magazine/ee291628.aspx
+http://www.aut.upt.ro/staff/diercan/data/PSSC/curs-10.pdf
