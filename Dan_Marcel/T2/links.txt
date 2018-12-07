@@ -1,0 +1,5 @@
+https://searchmicroservices.techtarget.com/definition/middleware?fbclid=IwAR15Gk5j39qcNQPd_vhkcwRpknrZRktzv4x8pHvNSURkM8h_JCvC1RpMkak
+https://l.facebook.com/l.php?u=https%3A%2F%2Fwww.feedough.com%2Fwhat-is-middleware-how-does-it-work%2F%3Ffbclid%3DIwAR31fH6knfiu4JAmwJWh7x0_JiQhK8W96_ohBvqODNKmQvonWAu0YuCKl5s&h=AT3Y3MJ6LOxyxQWEBptP2Vae07Bq41Z8lE5kqohrW3Uv3MREXHedahMM7meVKRJvHFuqOXn_tkovZ23MuVPVtR34XJlxyWTVjsNktVtGZdmcGgmKAyCGIIRKdroZ8HbpzsJJgbeSEY_82GeO4HA_rxtr-snBRakxW-dFyzn2KHNM4WK4XDHQSQ
+https://www.rabbitmq.com/tutorials/tutorial-two-python.html?fbclid=IwAR0B-bNKjEXOjZCiZd4mpPDQTv5E__DSxDBj86KsXDAZQSNiEoIEQApeJzA
+https://www.cloudamqp.com/blog/2014-12-03-what-is-message-queuing.html?fbclid=IwAR1UHiBlkgAKglzeOSZxwdySFWLqfHXlObMnRcU_YFZHmAc3GIvgyUdI3bI
+https://en.wikipedia.org/wiki/Message_queue?fbclid=IwAR3JOBEA98_cbu5-9ltZjFcx9Ydv60mMcEFuvE-JjVdLSmlgViUK9Nrk6s4
