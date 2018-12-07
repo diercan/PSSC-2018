@@ -1,0 +1,3 @@
+https://smartbear.com/learn/api-design/what-are-microservices/
+https://blog.webland.ro/2017/10/ce-este-arhitectura-bazata-pe-microservicii/
+http://www.dc.ac.tuiasi.ro/wp-content/uploads/sites/4/2016/07/ValacheEduardCosmin.pdf
