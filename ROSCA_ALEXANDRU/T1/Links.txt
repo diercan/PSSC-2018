@@ -1,0 +1,5 @@
+https://stackify.com/dependency-inversion-principle/?fbclid=IwAR3MDIUIQqPVJDuU3y1mP-qmGZzexOXA25bwCAE6UM5FK_s_2uK4iDugODM
+
+https://en.wikipedia.org/wiki/SOLID?fbclid=IwAR1iKZSABLzbizKDuDM5Z0ApXBfP2UH6SMdA7eFRt-SmbXq8tNS1XlAXF1A
+
+https://hackernoon.com/solid-principles-made-easy-67b1246bcdf?fbclid=IwAR1SJNLaCa-YuP7IbHnors6voeoEzJrY6tepjH9Vo2JnIMxrN2-bAxIt4PA
