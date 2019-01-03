@@ -1,0 +1,28 @@
+<div class="container demo-container">
+  <div class="login-form">
+    <form #signInForm="ngForm" (ngSubmit)="onSubmitSignInForm()">
+      <div class="text-center social-btn">
+        <a href="#" class="btn btn-primary btn-lg btn-block" (click)="signInWithFacebook()"><i class="fa fa-facebook"></i> Sign in with <b>Facebook</b></a>
+        <a href="#" class="btn btn-danger btn-lg btn-block" (click)="signInWithGoogle()"><i class="fa fa-google"></i> Sign in with <b>Google</b></a>
+      </div>
+      <div class="or-seperator"><b>or</b></div>
+      <div class="form-group">
+        <input type="text" class="form-control input-lg" [(ngModel)]="signInUserModel.Email" name="Email" placeholder="Email" required="required">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control input-lg" [(ngModel)]="signInUserModel.Password" name="Password" placeholder="Password" required="required">
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block login-btn" [disabled]="!signInForm.form.valid">Sign in</button>
+      </div>
+      <div class="alert alert-success" role="alert" style="margin-top:20px;" *ngIf="messageSuccess">
+        {{messageSuccess}}
+      </div>
+      <div class="alert alert-danger" role="alert" style="margin-top:20px;" *ngIf="messageError">
+        {{messageError}}
+      </div>
+    </form>
+    <div class="text-center"><span class="text-muted">Don't have an account?</span> <a [routerLink]="['/sign-up']">Sign
+        up here</a></div>
+  </div>
+</div>
