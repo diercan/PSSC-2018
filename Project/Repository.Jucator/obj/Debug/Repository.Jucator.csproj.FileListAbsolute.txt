@@ -1,0 +1,16 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\bin\Debug\Repository.Jucator.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\bin\Debug\Repository.Jucator.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\obj\Debug\ResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\bin\Debug\Modele.Jucator.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Jucator\bin\Debug\Modele.Jucator.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\bin\Debug\Repository.Jucator.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\bin\Debug\Repository.Jucator.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\bin\Debug\Modele.Jucator.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\bin\Debug\Modele.Jucator.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.csproj.CopyComplete
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Jucator\obj\Debug\Repository.Jucator.pdb
