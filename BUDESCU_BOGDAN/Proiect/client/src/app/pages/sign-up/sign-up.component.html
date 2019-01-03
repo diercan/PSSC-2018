@@ -1,0 +1,45 @@
+<div class="container demo-container">
+  <div class="register-form">
+    <form #signUpForm="ngForm" (ngSubmit)="onSubmitSignUpForm()">
+      <h2>Register</h2>
+      <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+      <div class="form-group">
+        <div class="row" style="margin:0px;">
+          <div class="col-xs-6"><input type="text" class="form-control" [(ngModel)]="signUpUserModel.FirstName" name="FirstName"
+              placeholder="First Name" required="required"></div>
+          <div class="col-xs-6"><input type="text" class="form-control" [(ngModel)]="signUpUserModel.LastName" name="LastName"
+              placeholder="Last Name" required="required"></div>
+        </div>
+      </div>
+      <div class="form-group">
+        <input type="email" class="form-control" [(ngModel)]="signUpUserModel.Email" name="Email" placeholder="Email"
+          required="required">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="signUpUserModel.Password" name="Password" placeholder="Password"
+          required="required">
+      </div>
+      <div class="form-group">
+        <input type="password" class="form-control" [(ngModel)]="signUpUserModel.ConfirmPassword" name="ConfirmPassword"
+          placeholder="Confirm Password" required="required">
+      </div>
+      <div class="form-group">
+        <!-- <label class="checkbox-inline"> -->
+        <mat-checkbox [(ngModel)]="signUpUserModel.AcceptTermsAndPrivacy" name="AcceptTermsAndPrivacy" required="required">
+          I accept the <a href="#">Terms of
+            Use</a> &amp; <a href="#">Privacy Policy</a></mat-checkbox>
+      </div>
+      <div class="form-group">
+        <button type="submit" class="btn btn-success btn-lg btn-block" [disabled]="!signUpForm.form.valid">Sign
+          up now</button>
+        <div class="alert alert-success" role="alert" style="margin-top:20px;" *ngIf="messageSuccess">
+          {{messageSuccess}}
+        </div>
+        <div class="alert alert-danger" role="alert" style="margin-top:20px;" *ngIf="messageError">
+          {{messageError}}
+        </div>
+      </div>
+    </form>
+    <div class="text-center">Already have an account? <a [routerLink]="['/sign-in']">Sign in</a></div>
+  </div>
+</div>

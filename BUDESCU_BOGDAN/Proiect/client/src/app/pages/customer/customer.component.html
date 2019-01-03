@@ -1,0 +1,98 @@
+<div class="container demo-container">
+  <div class="row" style="margin-bottom: 15px;">
+    <div class="col-sm-12">
+      <h4>
+        Data about customers
+      </h4>
+    </div>
+  </div>
+  <div class="row" style="margin-bottom: 15px;">
+    <div class="col-sm-12">
+      <button mat-raised-button color="primary" (click)="showCreateCustomer()" id="btn_create_customer">
+        {{buttonMessage_1}}
+      </button>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 15px;" *ngIf="showCreateCustomerForm">
+    <!-- ============================ CREATE CUSTOMER FORM ============================ -->
+    <div class="col-sm-8">
+      <form #createCustomerForm="ngForm" (ngSubmit)="onSubmitCreateCustomerForm()">
+  
+        <div class="mb-3">
+          <label>First Name</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.firstName" #name="ngModel" name="firstName"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Last Name</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.lastName" #name="ngModel" name="lastName"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Email</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.email" #name="ngModel" name="email"
+            required>
+        </div>
+        <div class="mb-3">
+          <button type="submit" class="btn btn-success" [disabled]="!createCustomerForm.form.valid">Save </button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="table-responsive">
+    <table class="table table-striped table-sm" style="text-align: center;">
+      <thead>
+        <tr>
+          <th *ngFor="let head of tableHead" [attr.colspan]="head.colspan">{{head.name}}</th>
+        </tr>
+      </thead>
+      <tbody *ngFor="let customer of customers">
+        <tr>
+          <td style="width:10%">{{customer.id}}</td>
+          <td style="width:20%">{{customer.firstName}}</td>
+          <td style="width:20%">{{customer.lastName}}</td>
+          <td style="width:20%">{{customer.email}}</td>
+          <td style="width:20%">{{customer.countryId}}</td>
+          <td style="width:30%">
+            <button mat-raised-button color="warn" (click)="deleteCustomer(customer.id)">Delete</button>
+          </td>
+          <td>
+            <button mat-raised-button color="primary" (click)="showUpdateCustomer(customer)">Update</button>
+          </td>
+        </tr>
+
+        <tr *ngIf="updateUserModel?.id == customer.id">
+          <td colspan="6">
+            <!-- ============================ UPDATE CUSTOMER FORM ============================ -->
+            <div class="col-sm-8" style="margin:auto">
+              <form #updateCustomerForm="ngForm" (ngSubmit)="onSubmitUpdateCustomerForm()">
+                <div class="mb-3">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.firstName" #name="ngModel" name="firstName"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.lastName" #name="ngModel" name="lastName"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Email</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.email" #name="ngModel" name="email"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <button type="submit" class="btn btn-success" [disabled]="!updateCustomerForm.form.valid">Update
+                  </button>
+                </div>
+              </form>
+            </div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</div>
