@@ -1,0 +1,16 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\bin\Debug\Modele.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\bin\Debug\Modele.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\bin\Debug\Modele.Jucator.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\bin\Debug\Modele.Jucator.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.csprojResolveAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\bin\Debug\Modele.Echipa.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\bin\Debug\Modele.Echipa.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\bin\Debug\Modele.Jucator.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\bin\Debug\Modele.Jucator.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.csprojAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.csproj.CoreCompileInputs.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.csproj.CopyComplete
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Echipa\obj\Debug\Modele.Echipa.pdb

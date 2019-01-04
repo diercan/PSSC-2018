@@ -1,0 +1,16 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\bin\Debug\Repository.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\bin\Debug\Repository.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\obj\Debug\ResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\bin\Debug\Modele.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Echipa\bin\Debug\Modele.Echipa.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\bin\Debug\Repository.Echipa.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\bin\Debug\Repository.Echipa.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\bin\Debug\Modele.Echipa.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\bin\Debug\Modele.Echipa.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.csproj.CopyComplete
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Echipa\obj\Debug\Repository.Echipa.pdb
