@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,14 +12,14 @@ namespace PsscProject.Models.Products
     {
         private List<Return> returns = new List<Return>();
 
-        public Guid Id { get; protected set; }
-        public string Name { get; protected set; }
-        public DateTime Created { get; protected set; }
-        public DateTime Modified { get; protected set; }
-        public bool Active { get; protected set; }
-        public int Quantity { get; protected set; }
-        public decimal Cost { get; protected set; }
-        public ProductCode Code { get; protected set; }
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Modified { get; set; }
+        public bool Active { get; set; }
+        public int Quantity { get; set; }
+        public int Cost { get; set; }
+        public ProductCode Code { get; set; }
         public ReadOnlyCollection<Return> Returns
         {
             get
@@ -27,7 +28,7 @@ namespace PsscProject.Models.Products
             }
         }
 
-        public static Product Create(string name, int quantity, decimal cost, ProductCode productCode)
+        public static Product Create(string name, int quantity, int cost, ProductCode productCode)
         {
             Product product = new Product()
             {

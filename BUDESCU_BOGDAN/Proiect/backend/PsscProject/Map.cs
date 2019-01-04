@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using PsscProject.ApplicationLayer.Customers;
+using PsscProject.ApplicationLayer.Users;
 using PsscProject.Models.Customers;
+using PsscProject.Models.Users;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,17 +16,8 @@ namespace PsscProject
         {
             CreateMap<Customer, CustomerDTO>();
             CreateMap<CustomerDTO, Customer>();
-
-            //Mapper.CreateMap<Cart, CartDto>();
-            //Mapper.CreateMap<CartProduct, CartProductDto>();
-
-            //Mapper.CreateMap<Purchase, CheckOutResultDto>().ForMember(x => x.PurchaseId, options => options.MapFrom(x => x.Id));
-
-            //Mapper.CreateMap<CreditCard, CreditCardDto>();
-
-            //Mapper.CreateMap<Product, ProductDto>();
-            //Mapper.CreateMap<CustomerPurchaseHistoryReadModel, CustomerPurchaseHistoryDto>();
-            //Mapper.CreateMap<DomainEventRecord, EventDto>();
+            CreateMap<User, UserDTO>();
+            CreateMap<UserDTO, User>();
         }
     }
 }

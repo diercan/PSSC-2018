@@ -1,15 +1,13 @@
-using PsscProject.Helpers.Domain;
+﻿using PsscProject.Helpers.Domain;
 using PsscProject.Models.Countries;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace PsscProject.Models.Customers
 {
-    [Table("customer")]
     public class Customer : IAggregateRoot
     {
         private List<CreditCard> creditCards = new List<CreditCard>();

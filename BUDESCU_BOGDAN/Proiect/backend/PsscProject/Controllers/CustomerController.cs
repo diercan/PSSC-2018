@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
@@ -23,22 +24,22 @@ namespace PsscProject.Controllers
             _customerService = customerService;
         }
         // GET: api/Customer
-        [HttpGet]
+        [HttpGet, Authorize(Roles = "Manager")]
         public IEnumerable<CustomerDTO> Get()
         {
             return this._customerService.GetAll();
         }
 
         // GET: api/Customer/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet("{id}", Name = "Get"), Authorize(Roles = "Manager")]
         public CustomerDTO Get(Guid id)
         {
             return this._customerService.Get(id);
         }
         
         // POST: api/Customer
-        [HttpPost]
-        public void Post([FromBody]JObject value)
+        [HttpPost, Authorize]
+        public CustomerDTO Post([FromBody]JObject value)
         {
             CustomerDTO customerDto = new CustomerDTO()
             {
@@ -46,11 +47,11 @@ namespace PsscProject.Controllers
                 FirstName = (String)value["firstName"],
                 Email = (String)value["email"],
             };
-            this._customerService.Add(customerDto);
+            return this._customerService.Add(customerDto);
         }
         
         // PUT: api/Customer/5
-        [HttpPut("{id}")]
+        [HttpPut("{id}"), Authorize]
         public void Put(int id, [FromBody]JObject value)
         {
             CustomerDTO customerDto = new CustomerDTO()
@@ -64,10 +65,9 @@ namespace PsscProject.Controllers
         }
         
         // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        [HttpDelete("{id}"), Authorize]
         public void Delete(Guid id)
         {
-            Console.WriteLine(id);
             this._customerService.Remove(id);
         }
     }

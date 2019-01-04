@@ -12,7 +12,7 @@ namespace PsscProject.ApplicationLayer.Customers
         void Update(CustomerDTO customerDto);
         void Remove(Guid customerId);
         CustomerDTO Get(Guid customerId);
-        List<CustomerDTO> GetAll();
+        IEnumerable<CustomerDTO> GetAll();
         CreditCardDTO Add(Guid customerId, CreditCardDTO creditCard);
         List<CustomerPurchaseHistoryDTO> GetAllCustomerPurchaseHistory();
     }

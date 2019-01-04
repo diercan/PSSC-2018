@@ -41,19 +41,12 @@ namespace PsscProject.ApplicationLayer.Customers
 
         public CustomerDTO Add(CustomerDTO customerDto)
         {
-            //Customer existingCustomer = this.customerRepository.FindOne(c => c.Email == customerDto.Email);
-
-            //if (existingCustomer != null)
-            //{
-            //   throw new Exception("Customer with this email already exists");
-            //}
-
             Country country = Country.Create("Romania");
             Customer customer = Customer.Create(customerDto.FirstName, customerDto.LastName, customerDto.Email, country);
 
-            this.customerRepository.Create(customer);
+            this.customerRepository.Create(_mapper.Map<Customer, CustomerDTO>(customer));
             this.customerRepository.Save();
-            return _mapper.Map<Customer, CustomerDTO>(customer);
+            return customerDto;
         }
 
         public void Update(CustomerDTO customerDto)
@@ -62,7 +55,7 @@ namespace PsscProject.ApplicationLayer.Customers
             {
                 throw new Exception("Id can't be empty");
             }
-            Customer customer = this.customerRepository.FindOne(c => c.Id == customerDto.Id);
+            CustomerDTO customer = this.customerRepository.FindOne(c => c.Id == customerDto.Id);
 
             if (customer == null)
             {
@@ -77,7 +70,7 @@ namespace PsscProject.ApplicationLayer.Customers
 
         public void Remove(Guid customerId)
         {
-            Customer customer = this.customerRepository.FindOne(c => c.Id == customerId);
+            CustomerDTO customer = this.customerRepository.FindOne(c => c.Id == customerId);
 
             if (customer == null)
             {
@@ -90,14 +83,14 @@ namespace PsscProject.ApplicationLayer.Customers
 
         public CustomerDTO Get(Guid customerId)
         {
-            Customer customer = customerRepository.FindOne(c => c.Id == customerId);
-            return _mapper.Map<Customer, CustomerDTO>(customer);
+            CustomerDTO customer = customerRepository.FindOne(c => c.Id == customerId);
+            return customer;
         }
 
-        public List<CustomerDTO> GetAll()
+        public IEnumerable<CustomerDTO> GetAll()
         {
-            IEnumerable<Customer> customer = this.customerRepository.FindAll();
-            return _mapper.Map<IEnumerable<Customer>, List<CustomerDTO>>(customer);
+            IEnumerable<CustomerDTO> customers = this.customerRepository.FindAll();
+            return customers;
         }
 
         public CreditCardDTO Add(Guid customerId, CreditCardDTO creditCardDto)
@@ -120,7 +113,6 @@ namespace PsscProject.ApplicationLayer.Customers
             return null;
         }
 
-        //Approach 2 - Infrastructure Read Model Projection (Preferred)
         public List<CustomerPurchaseHistoryDTO> GetAllCustomerPurchaseHistory()
         {
             //IEnumerable<CustomerPurchaseHistoryReadModel> customersPurchaseHistory =

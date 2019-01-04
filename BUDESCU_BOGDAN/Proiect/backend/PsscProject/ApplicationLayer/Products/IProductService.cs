@@ -5,10 +5,12 @@ using System.Threading.Tasks;
 
 namespace PsscProject.ApplicationLayer.Products
 {
-    interface IProductService
+    public interface IProductService
     {
         ProductDTO Get(Guid productId);
-        List<ProductDTO> GetAll();
+        IEnumerable<ProductDTO> GetAll();
         ProductDTO Add(ProductDTO product);
+        void Update(ProductDTO productDto);
+        void Remove(Guid id);
     }
 }

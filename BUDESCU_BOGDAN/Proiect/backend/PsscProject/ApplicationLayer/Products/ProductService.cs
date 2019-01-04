@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PsscProject.ApplicationLayer.Products
 {
-    public class ProductService
+    public class ProductService:IProductService
     {
         private RepositoryContext _repoContext;
         private IProductRepository productRepository;
@@ -23,24 +23,54 @@ namespace PsscProject.ApplicationLayer.Products
 
         public ProductDTO Add(ProductDTO productDto)
         {
-            ProductCode productCode = ProductCode.Create("cod");
-            Product product = Product.Create(productDto.Name, productDto.Quantity, productDto.Cost, productCode);
-
-            this.productRepository.Create(product);
+            this.productRepository.Create(productDto);
             this.productRepository.Save();
-            return _mapper.Map<Product, ProductDTO>(product);
+            return productDto;
         }
 
         public ProductDTO Get(Guid productId)
         {
-            Product product = this.productRepository.FindOne(c => c.Id == productId);
-            return _mapper.Map<Product, ProductDTO>(product);
+            ProductDTO product = this.productRepository.FindOne(c => c.Id == productId);
+            return product;
         }
 
-        public List<ProductDTO> GetAll()
+        public IEnumerable<ProductDTO> GetAll()
         {
-            IEnumerable<Product> product = this.productRepository.FindAll();
-            return _mapper.Map<IEnumerable<Product>, List<ProductDTO>>(product);
+            IEnumerable<ProductDTO> products = this.productRepository.FindAll();
+            return products;
+        }
+
+        public void Update(ProductDTO productDto)
+        {
+            if (productDto.Id == Guid.Empty)
+            {
+                throw new Exception("Id can't be empty");
+            }
+            ProductDTO product = this.productRepository.FindOne(c => c.Id == productDto.Id);
+
+            if (product == null)
+            {
+                throw new Exception("No such product exists");
+            }
+            product.Active = productDto.Active;
+            product.Cost = productDto.Cost;
+            product.Name = productDto.Name;
+            product.Quantity = productDto.Quantity;
+            this.productRepository.Update(product);
+            this.productRepository.Save();
+        }
+
+        public void Remove(Guid productId)
+        {
+            ProductDTO product = this.productRepository.FindOne(c => c.Id == productId);
+
+            if (product == null)
+            {
+                throw new Exception("No such product exists");
+            }
+
+            this.productRepository.Delete(product);
+            this.productRepository.Save();
         }
     }
 }

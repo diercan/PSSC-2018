@@ -8,6 +8,7 @@ namespace PsscProject.Models.Products
 {
     public class Return
     {
+        public Guid Id { get; set; }
         public Product Product { get; protected set; }
         public Customer Customer { get; protected set; }
         public ReturnReason Reason { get; protected set; }

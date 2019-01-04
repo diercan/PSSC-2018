@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
 
 namespace PsscProject.ApplicationLayer.Products
 {
+    [Table("product")]
     public class ProductDTO
     {
         public Guid Id { get; set; }
@@ -13,8 +15,8 @@ namespace PsscProject.ApplicationLayer.Products
         public DateTime Modified { get; set; }
         public bool Active { get; set; }
         public int Quantity { get; set; }
-        public decimal Cost { get; set; }
+        public int Cost { get; set; }
         public Guid ProductCodeId { get; set; }
-        public string ProductCodeName { get; set; }
+        //public string ProductCodeName { get; set; }
     }
 }

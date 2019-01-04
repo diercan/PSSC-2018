@@ -7,12 +7,12 @@ namespace PsscProject.Models.Customers
 {
     public class CreditCard
     {
-        public Guid Id { get; protected set; }
-        public string NameOnCard { get; protected set; }
-        public string CardNumber { get; protected set; }
-        public bool Active { get; protected set; }
-        public DateTime Created { get; protected set; }
-        public DateTime Expiry { get; protected set; }
-        public Customer Customer { get; protected set; }
+        public Guid Id { get; set; }
+        public string NameOnCard { get; set; }
+        public string CardNumber { get; set; }
+        public bool Active { get; set; }
+        public DateTime Created { get; set; }
+        public DateTime Expiry { get; set; }
+        public Customer Customer { get; set; }
     }
 }

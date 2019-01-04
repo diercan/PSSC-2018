@@ -1,5 +1,4 @@
-﻿using PsscProject.ApplicationLayer.Products;
-using PsscProject.Models.Products;
+﻿using PsscProject.Models.Users;
 using PsscProject.Repository.Interfaces;
 using System;
 using System.Collections.Generic;
@@ -8,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace PsscProject.Repository
 {
-    public class ProductRepository : RepositoryBase<ProductDTO>, IProductRepository
+    public class UserRepository : RepositoryBase<User>, IUserRepository
     {
-        public ProductRepository(RepositoryContext repositoryContext)
+        public UserRepository(RepositoryContext repositoryContext)
             : base(repositoryContext)
         {
         }
