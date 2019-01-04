@@ -1,4 +1,4 @@
-﻿using PsscProject.Helpers.Domain;
+using PsscProject.Helpers.Domain;
 using PsscProject.Models.Countries;
 using System;
 using System.Collections.Generic;
@@ -21,14 +21,6 @@ namespace PsscProject.Models.Customers
         public int Balance { get; set; }
         public Guid CountryId { get; set; }
         public ReadOnlyCollection<CreditCard> CreditCards { get { return this.creditCards.AsReadOnly(); } }
-
-        public void ChangeEmail(string email)
-        {
-            if (this.Email != email)
-            {
-                this.Email = email;
-            }
-        }
 
         public static Customer Create(string firstname, string lastname, string email, Country country)
         {
