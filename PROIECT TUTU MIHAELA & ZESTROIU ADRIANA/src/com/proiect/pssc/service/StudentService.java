@@ -1,10 +1,10 @@
-package com.proiect.pssc.dao;
+package com.proiect.pssc.service;
 
 import java.util.List;
 
 import com.proiect.pssc.entity.Student;
 
-public interface StudentDAO {
+public interface StudentService {
 
 	public List<Student> getStudents();
 
@@ -13,5 +13,4 @@ public interface StudentDAO {
 	public Student getStudent(int theId);
 
 	public void deleteStudent(int theId);
-
 }
