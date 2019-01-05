@@ -1,0 +1,16 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\bin\Debug\Modele.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\bin\Debug\Modele.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\bin\Debug\Modele.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\bin\Debug\Modele.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.csprojResolveAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\bin\Debug\Modele.Echipa.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\bin\Debug\Modele.Echipa.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.csprojAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.csproj.CoreCompileInputs.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.csproj.CopyComplete
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\Modele.Meci\obj\Debug\Modele.Meci.pdb

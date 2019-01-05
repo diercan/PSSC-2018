@@ -1,0 +1,16 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\bin\Debug\Repository.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\bin\Debug\Repository.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\obj\Debug\ResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\bin\Debug\Modele.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Repository.Meci\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\bin\Debug\Repository.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\bin\Debug\Repository.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.csproj.CopyComplete
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Repository.Meci\obj\Debug\Repository.Meci.pdb
