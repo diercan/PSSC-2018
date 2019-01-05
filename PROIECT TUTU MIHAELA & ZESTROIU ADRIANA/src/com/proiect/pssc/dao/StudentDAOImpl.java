@@ -19,8 +19,8 @@ public class StudentDAOImpl implements StudentDAO {
 	private SessionFactory sessionFactory;
 
 	@Override
-	@Transactional // spring starts and ends session automatically 
-	// commented bc this annotation was added to the CustomerServiceImpl
+//	@Transactional spring starts and ends session automatically 
+	// commented bc this annotation was added to the StudentServiceImpl
 	public List<Student> getStudents() {
 
 		// get the current hibernate session
@@ -35,6 +35,42 @@ public class StudentDAOImpl implements StudentDAO {
 
 		// return the results
 		return students;
+	}
+
+	@Override
+	public void saveStudent(Student theStudent) {
+
+		// get current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// save the student 
+		currentSession.saveOrUpdate(theStudent);
+	}
+
+	@Override
+	public Student getStudent(int theId) {
+
+		// get current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// retrieve/read from the database using the primary key 
+		Student theStudent = currentSession.get(Student.class, theId);
+		
+		return theStudent;
+	}
+
+	@Override
+	public void deleteStudent(int theId) {
+
+		// get current hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// delete object with primary key equat to the id that was passed in
+		Query theQuery = currentSession.createQuery("delete from Student where id=:studentId");
+		
+		theQuery.setParameter("studentId", theId);
+		
+		theQuery.executeUpdate();
 	}
 
 }
