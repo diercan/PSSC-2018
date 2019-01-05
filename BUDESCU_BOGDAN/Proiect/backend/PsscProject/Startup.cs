@@ -16,6 +16,8 @@ using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using PsscProject.ApplicationLayer.Customers;
+using PsscProject.Helpers.Domain;
+using PsscProject.Models.Customers;
 using PsscProject.Services;
 
 namespace PsscProject

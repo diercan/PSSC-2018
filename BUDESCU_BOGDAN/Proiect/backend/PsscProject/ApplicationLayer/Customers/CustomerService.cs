@@ -14,17 +14,13 @@ namespace PsscProject.ApplicationLayer.Customers
 {
     public class CustomerService : ICustomerService
     {
-        private RepositoryContext _repoContext;
         private ICustomerRepository customerRepository;
         private readonly IMapper _mapper;
-        // private IRepositoryBase<Country> countryRepository;
-        // private IRepositoryBase<Purchase> purchaseRepository;
      
-        public CustomerService(RepositoryContext repositoryContext, IMapper mapper)
+        public CustomerService(ICustomerRepository customerRepository, IMapper mapper)
         {
             _mapper = mapper;
-            _repoContext = repositoryContext;
-            customerRepository = new CustomerRepository(_repoContext);
+            this.customerRepository = customerRepository;
         }
 
         public bool IsEmailAvailable(string email)
@@ -39,14 +35,14 @@ namespace PsscProject.ApplicationLayer.Customers
             return false;
         }
 
-        public CustomerDTO Add(CustomerDTO customerDto)
+        public Customer Add(CustomerDTO customerDto)
         {
             Country country = Country.Create("Romania");
             Customer customer = Customer.Create(customerDto.FirstName, customerDto.LastName, customerDto.Email, country);
 
             this.customerRepository.Create(_mapper.Map<Customer, CustomerDTO>(customer));
             this.customerRepository.Save();
-            return customerDto;
+            return customer;
         }
 
         public void Update(CustomerDTO customerDto)

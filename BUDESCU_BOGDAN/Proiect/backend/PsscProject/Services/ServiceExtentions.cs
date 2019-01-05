@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using PsscProject.ApplicationLayer.Customers;
+using PsscProject.ApplicationLayer.History;
 using PsscProject.ApplicationLayer.Products;
 using PsscProject.ApplicationLayer.Users;
 using PsscProject.Repository;
@@ -44,9 +45,15 @@ namespace PsscProject.Services
 
         public static void ConfigureAppServices(this IServiceCollection services)
         {
+            services.AddScoped<ICustomerRepository, CustomerRepository>();
+            services.AddScoped<IProductRepository, ProductRepository>();
+            services.AddScoped<IUserRepository, UserRepository>();
+            services.AddScoped<IDomainEventRepository, DomainEventRepository>();
+            services.AddScoped<ICartRepository, CartRepository>();
+            services.AddScoped<IUserService, UserService>();
             services.AddScoped<ICustomerService, CustomerService>();
             services.AddScoped<IProductService, ProductService>();
-            services.AddScoped<IUserService, UserService>();
+            services.AddScoped<IHistoryService, HistoryService>();
         }
     }
 }

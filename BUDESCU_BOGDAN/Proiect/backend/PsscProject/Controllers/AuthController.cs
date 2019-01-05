@@ -48,7 +48,7 @@ namespace PsscProject.Controllers
                 issuer: "http://0.0.0.0:5000",
                 audience: "http://0.0.0.0:5000",
                 claims: claims,
-                expires: DateTime.Now.AddMinutes(5),
+                expires: DateTime.Now.AddMinutes(300),
                 signingCredentials: signinCredentials
             );
 

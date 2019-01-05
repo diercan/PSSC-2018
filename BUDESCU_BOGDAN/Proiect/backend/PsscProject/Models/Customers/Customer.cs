@@ -31,6 +31,8 @@ namespace PsscProject.Models.Customers
                 CountryId = country.Id
             };
 
+            DomainEvents.Raise<CustomerCreated>(new CustomerCreated(customer));
+
             return customer;
         }
 

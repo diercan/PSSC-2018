@@ -4,12 +4,15 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using PsscProject.ApplicationLayer.Customers;
+using PsscProject.ApplicationLayer.History;
+using PsscProject.Models.Customers;
 
 namespace PsscProject.Controllers
 {
@@ -18,11 +21,16 @@ namespace PsscProject.Controllers
     public class CustomerController : Controller
     {
         private ICustomerService _customerService;
+        private IHistoryService _historyService;
+        private IMapper _mapper;
 
-        public CustomerController(ICustomerService customerService)
+        public CustomerController(ICustomerService customerService, IHistoryService historyService, IMapper mapper)
         {
             _customerService = customerService;
+            _historyService = historyService;
+            _mapper = mapper;
         }
+
         // GET: api/Customer
         [HttpGet, Authorize(Roles = "Manager")]
         public IEnumerable<CustomerDTO> Get()
@@ -47,7 +55,11 @@ namespace PsscProject.Controllers
                 FirstName = (String)value["firstName"],
                 Email = (String)value["email"],
             };
-            return this._customerService.Add(customerDto);
+            //_mapper.Map<Customer, CustomerDTO>(customer)
+            Customer customer = this._customerService.Add(customerDto);
+            //this._historyService.AddEvent(new CustomerCreated() { Customer = customer });
+
+            return _mapper.Map<Customer, CustomerDTO>(customer);
         }
         
         // PUT: api/Customer/5

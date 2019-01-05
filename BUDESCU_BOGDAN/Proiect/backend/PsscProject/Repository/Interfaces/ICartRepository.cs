@@ -1,5 +1,4 @@
-﻿using PsscProject.ApplicationLayer.Products;
-using PsscProject.Models.Products;
+﻿using PsscProject.ApplicationLayer.Carts;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PsscProject.Repository.Interfaces
 {
-    public interface IProductRepository : IRepositoryBase<ProductDTO>
+    public interface ICartRepository : IRepositoryBase<CartDTO>
     {
     }
 }

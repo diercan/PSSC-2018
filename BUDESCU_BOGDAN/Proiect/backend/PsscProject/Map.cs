@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using PsscProject.ApplicationLayer.Customers;
+using PsscProject.ApplicationLayer.History;
 using PsscProject.ApplicationLayer.Users;
+using PsscProject.Helpers.Domain;
 using PsscProject.Models.Customers;
 using PsscProject.Models.Users;
 using System;
@@ -18,6 +20,9 @@ namespace PsscProject
             CreateMap<CustomerDTO, Customer>();
             CreateMap<User, UserDTO>();
             CreateMap<UserDTO, User>();
+            CreateMap<DomainEventRecord, EventDTO>();
+            CreateMap<EventDTO, DomainEventRecord>();
+
         }
     }
 }
