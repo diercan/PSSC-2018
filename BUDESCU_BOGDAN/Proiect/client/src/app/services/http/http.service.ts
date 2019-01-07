@@ -5,12 +5,13 @@ import { HttpParamsOptions, HttpParams } from '@angular/common/http/src/params';
 import { SignUp } from 'src/app/models/SignUp';
 import { SignIn } from 'src/app/models/SignIn';
 import { Customer } from 'src/app/models/Customer';
+import {Product} from 'src/app/models/Product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class HttpService {
-  public server: any = "http://192.168.1.7:5000";
+  public server: any = "http://10.9.23.64:5000";
   constructor(private http: HttpClient) { }
 
   public getCustomerById(id: number): Observable<any> {
@@ -18,7 +19,7 @@ export class HttpService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token') || ''
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
       })
     };
     return this.http.get<Customer>(`${this.server}/api/customer/${id}`, options);
@@ -29,7 +30,7 @@ export class HttpService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token') || ''
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
       })
     };
     return this.http.get<Customer[]>(`${this.server}/api/customer`, options);
@@ -40,7 +41,7 @@ export class HttpService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token') || ''
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
       }),
     };
     return this.http.delete(`${this.server}/api/customer/${id}`, options);
@@ -52,7 +53,7 @@ export class HttpService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token') || ''
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
       })
     };
     return this.http.put(`${this.server}/api/customer/${customer.id}`, body, options);
@@ -64,13 +65,70 @@ export class HttpService {
     let options = {
       headers: new HttpHeaders({
         'Content-Type': 'application/json',
-        'Authorization': localStorage.getItem('token') || ''
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
       })
     };
     return this.http.post(`${this.server}/api/customer`, body, options);
   }
 
-  public regiser(signUpData: SignUp) {
+  public getProductById(id: number): Observable<any> {
+
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
+      })
+    };
+    return this.http.get<Product>(`${this.server}/api/product/${id}`, options);
+  }
+
+  public getProducts(): Observable<Product[]> {
+    
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization':  "Bearer " + localStorage.getItem('token') || ''
+      })
+    };
+    return this.http.get<Product[]>(`${this.server}/api/product`, options);
+  }
+
+  public deleteProduct(id: string): Observable<any> {
+
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
+      }),
+    };
+    return this.http.delete(`${this.server}/api/product/${id}`, options);
+  }
+
+  public updateProduct(product: Product) {
+
+    let body = JSON.stringify(product);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
+      })
+    };
+    return this.http.put(`${this.server}/api/product/${product.id}`, body, options);
+  }
+
+  public createProduct(product: Product) {
+
+    let body = JSON.stringify(product);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
+      })
+    };
+    return this.http.post(`${this.server}/api/product`, body, options);
+  }
+
+  public register(signUpData: SignUp) {
 
     let body = JSON.stringify(signUpData);
     let options = {
@@ -78,7 +136,7 @@ export class HttpService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post(`${this.server}/api/users/register`, body, options);
+    return this.http.post(`${this.server}/api/auth/register`, body, options);
   }
 
   public login(signInData: SignIn) {
@@ -89,8 +147,7 @@ export class HttpService {
         'Content-Type': 'application/json'
       })
     };
-    return this.http.post(`${this.server}/api/users/login`, body, options);
- 
+    return this.http.post(`${this.server}/api/auth/login`, body, options);
   }
 
 

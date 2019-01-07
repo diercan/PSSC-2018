@@ -1,0 +1,53 @@
+<div class="container demo-container">
+  <div class="row" style="margin-bottom: 15px;">
+    <div class="col-sm-12">
+      <h4>
+        Data about products
+      </h4>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 portofolio-item" *ngFor="let product of products;let i=index" style="text-align: center">
+      <div *ngIf="i<indexPage * 5 && i>=(indexPage - 1) * 5">
+        <div class="card ">
+            <h4 class="card-title">
+                <a href="#">{{product.name}}</a>
+              </h4>
+          <img src={{product.image}} style="width:100%;height:auto">
+          <div class="card-body">
+          
+            <div class="card-text">
+              <p>{{product.procesor}}</p>
+            </div>
+            <div class="text-center social-btn">
+              <button *ngIf="!selectedProducts.includes(i)" class="btn btn-primary btn-lg btn-block" (click)="AddProduct(i)">Add to cart</button>
+              <button *ngIf="selectedProducts.includes(i)" class="btn btn-danger btn-lg btn-block" (click)="DeleteProduct(i)">Delete from cart</button>
+              
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" aria-label="Previous" (click)="PreviousButton()">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li class="page-item">
+      <a class="page-link">{{indexPage}}</a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" aria-label="Next" (click)="NextButton()">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</div>

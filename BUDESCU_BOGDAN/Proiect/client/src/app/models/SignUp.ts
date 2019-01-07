@@ -1,15 +1,11 @@
 export class SignUp {
-    public FirstName: string;
-    public LastName: string;
-    public Email: string;
+    public UserName: string;
     public Password: string;
     public ConfirmPassword: string;
     public AcceptTermsAndPrivacy: boolean = false;
-    public Role: string = "FURNIZOR";
-    constructor(FirstName: string, LastName: string, Email: string, Password: string, ConfirmPassword: string) {
-        this.FirstName = FirstName;
-        this.LastName = LastName;
-        this.Email = Email;
+    public Role: string = "CUSTOMER";
+    constructor(UserName: string, Password: string, ConfirmPassword: string) {
+        this.UserName = UserName;
         this.Password = Password;
         this.ConfirmPassword = ConfirmPassword;
     }

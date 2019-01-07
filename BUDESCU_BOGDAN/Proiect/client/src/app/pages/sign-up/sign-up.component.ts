@@ -10,40 +10,16 @@ import { HttpErrorResponse } from '@angular/common/http';
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.css']
 })
-export class SignUpComponent implements OnInit, OnChanges, AfterViewInit, OnDestroy {
-  public signUpUserModel: SignUp = new SignUp("", "", "", "", "");
+export class SignUpComponent  {
+  public signUpUserModel: SignUp = new SignUp("", "", "");
   public messageSuccess: string = ""
   public messageError: string = ""
   @ViewChild("signUpForm") signUpForm: NgForm;
   constructor(
-    public cryptoService: CryptoService,
     public httpService: HttpService
   ) { }
 
-  ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-
-  }
-
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-
-  }
-
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-
-  }
-
+  
   public onSubmitSignUpForm(): void {
 
     //verifica daca form pt register este valid
@@ -55,19 +31,12 @@ export class SignUpComponent implements OnInit, OnChanges, AfterViewInit, OnDest
 
     //creeaza un nou obiect de tip SignUp (/models/SignUp)
     let signUpData = new SignUp(
-      this.signUpUserModel.FirstName,
-      this.signUpUserModel.LastName,
-      this.signUpUserModel.Email,
+      this.signUpUserModel.UserName,
       this.signUpUserModel.Password,
       this.signUpUserModel.ConfirmPassword
     );
 
-    //cripteaza parola pentru a transmite a nu se transmite parola direct pe request...
-    let encryptedPassword = this.cryptoService.encrypt(signUpData.Password);
-    signUpData.Password = encryptedPassword;
-    signUpData.ConfirmPassword = encryptedPassword;
-
-    this.httpService.regiser(signUpData).subscribe(
+    this.httpService.register(signUpData).subscribe(
       (data: any) => {
         this.messageSuccess = data.message;
         setTimeout(() => { this.messageSuccess = "" }, 3000);

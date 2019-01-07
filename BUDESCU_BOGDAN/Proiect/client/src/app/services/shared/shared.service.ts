@@ -1,20 +1,28 @@
 import { Injectable } from '@angular/core';
+import * as jwt_decode from "jwt-decode";
 
 @Injectable({
   providedIn: 'root'
 })
 export class SharedService {
-  public languageData = require("./app_ro.json")
+ public isLoggedIn : boolean = localStorage.getItem('token')!=null;
+ public userData : any;
+ public role : any;
   constructor() { 
-
-    this.changeLanguage("ro");
-    this.changeLanguage("en")
-
+    this.getUserName();
   }
-
-  public changeLanguage(language) {
-
-    console.log(language)
-    this.languageData = require("./app_" + language + ".json");
+  
+  public getUserName()
+  {
+    if(localStorage.getItem('token')!=null)
+    {
+      console.log(jwt_decode(localStorage.getItem('token')));
+      this.userData = jwt_decode(localStorage.getItem('token'))["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"];
+      this.role=jwt_decode(localStorage.getItem('token'))["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"];
+      console.log(this.userData);
+    }
+    else{
+      this.userData="";
+    }
   }
 }

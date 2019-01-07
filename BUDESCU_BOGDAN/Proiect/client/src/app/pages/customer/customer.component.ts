@@ -1,13 +1,15 @@
 import { Component, OnInit, OnChanges, AfterViewInit, OnDestroy, SimpleChanges } from '@angular/core';
 import { HttpService } from 'src/app/services/http/http.service';
 import { Customer } from 'src/app/models/Customer';
+import { SharedService } from 'src/app/services/shared/shared.service';
+import { Route, Router } from '@angular/router';
 
 @Component({
   selector: 'app-customer',
   templateUrl: './customer.component.html',
   styleUrls: ['./customer.component.css']
 })
-export class CustomerComponent implements OnInit , OnChanges, AfterViewInit, OnDestroy{
+export class CustomerComponent {
 
   public tableHead = [
     { name: "Id", colspan: 1 },
@@ -22,33 +24,18 @@ export class CustomerComponent implements OnInit , OnChanges, AfterViewInit, OnD
   public updateUserModel: Customer = new Customer("","Budescu","Bogdan","bude@gmail.com","");
 
   public buttonMessage_1: string = "Show Create Customer Form";
-  constructor(private httpService : HttpService) {
+  constructor(
+    private httpService : HttpService,
+    private sharedService : SharedService,
+    private router : Router,
+    ) 
+    {
     this.getCustomers();
+    if(this.sharedService.role != 'Manager')
+    {
+      this.router.navigateByUrl('/products')
+    }
    }
-
-   ngOnChanges(changes: SimpleChanges): void {
-    //Called before any other lifecycle hook. Use it to inject dependencies, but avoid any serious work here.
-    //Add '${implements OnChanges}' to the class.
-
-  }
-
-  ngOnInit(): void {
-    //Called after the constructor, initializing input properties, and the first call to ngOnChanges.
-    //Add 'implements OnInit' to the class.
-
-  }
-
-  ngAfterViewInit(): void {
-    //Called after ngAfterContentInit when the component's view has been initialized. Applies to components only.
-    //Add 'implements AfterViewInit' to the class.
-
-  }
-
-  ngOnDestroy(): void {
-    //Called once, before the instance is destroyed.
-    //Add 'implements OnDestroy' to the class.
-
-  }
 
   public getCustomers() {
     this.httpService.getCustomers().subscribe((result: Customer[]) => {

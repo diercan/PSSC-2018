@@ -28,6 +28,7 @@
     "crypto-browserify": "^3.12.0",
     "font-awesome": "^4.7.0",
     "jquery": "^3.3.1",
+    "jwt-decode": "^2.2.0",
     "rxjs": "~6.3.3",
     "webpack": "^4.28.3",
     "zone.js": "~0.8.26"
