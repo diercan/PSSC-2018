@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using AutoMapper;
 using PsscProject.Repository;
 using Newtonsoft.Json;
+using PsscProject.Models.Generic;
 
 namespace PsscProject.ApplicationLayer.Customers
 {
@@ -37,8 +38,8 @@ namespace PsscProject.ApplicationLayer.Customers
 
         public Customer Add(CustomerDTO customerDto)
         {
-            Country country = Country.Create("Romania");
-            Customer customer = Customer.Create(customerDto.FirstName, customerDto.LastName, customerDto.Email, country);
+            Country country = Country.Create(new PlainText("Romania"));
+            Customer customer = Customer.Create(new PlainText(customerDto.FirstName), new PlainText(customerDto.LastName), new Email(customerDto.Email), country);
 
             this.customerRepository.Create(_mapper.Map<Customer, CustomerDTO>(customer));
             this.customerRepository.Save();

@@ -1,5 +1,6 @@
 ﻿using PsscProject.Helpers.Domain;
 using PsscProject.Models.Countries;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -12,15 +13,16 @@ namespace PsscProject.Models.Customers
     {
         private List<CreditCard> creditCards = new List<CreditCard>();
         public Guid Id { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Email { get; set; }
-        public string Password { get; set; }
-        public int Balance { get; set; }
+        public PlainText FirstName { get; set; }
+        public PlainText LastName { get; set; }
+        public Email Email { get; set; }
+        public PlainText Password { get; set; }
+        public Balance Balance { get; set; }
+        public Address Address { get; set; }
         public Guid CountryId { get; set; }
         public ReadOnlyCollection<CreditCard> CreditCards { get { return this.creditCards.AsReadOnly(); } }
 
-        public static Customer Create(string firstname, string lastname, string email, Country country)
+        public static Customer Create(PlainText firstname, PlainText lastname, Email email, Country country)
         {
             Customer customer = new Customer()
             {

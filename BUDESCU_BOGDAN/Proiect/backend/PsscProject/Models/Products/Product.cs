@@ -1,4 +1,5 @@
 ﻿using PsscProject.Helpers.Domain;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,12 +14,13 @@ namespace PsscProject.Models.Products
         private List<Return> returns = new List<Return>();
 
         public Guid Id { get; set; }
-        public string Name { get; set; }
+        public PlainText Name { get; set; }
+        public PlainText Details { get; set; }
         public DateTime Created { get; set; }
         public DateTime Modified { get; set; }
         public bool Active { get; set; }
-        public int Quantity { get; set; }
-        public int Cost { get; set; }
+        public Quantity Quantity { get; set; }
+        public Cost Cost { get; set; }
         public ProductCode Code { get; set; }
         public ReadOnlyCollection<Return> Returns
         {
@@ -28,12 +30,13 @@ namespace PsscProject.Models.Products
             }
         }
 
-        public static Product Create(string name, int quantity, int cost, ProductCode productCode)
+        public static Product Create(PlainText name, PlainText details, Quantity quantity, Cost cost, ProductCode productCode)
         {
             Product product = new Product()
             {
                 Id = Guid.NewGuid(),
                 Name = name,
+                Details = details,
                 Quantity = quantity,
                 Created = DateTime.Now,
                 Modified = DateTime.Now,

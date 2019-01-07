@@ -1,5 +1,6 @@
 ﻿using PsscProject.Helpers.Domain;
 using PsscProject.Models.Carts;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -20,7 +21,7 @@ namespace PsscProject.Models.Purchases
         public DateTime Created { get; protected set; }
         public Guid CustomerId { get; protected set; }
         public decimal TotalTax { get; protected set; }
-        public decimal TotalCost { get; protected set; }
+        public Cost TotalCost { get; protected set; }
 
         public static Purchase Create(Cart cart)
         {

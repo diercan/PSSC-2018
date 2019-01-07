@@ -1,4 +1,5 @@
 ﻿using PsscProject.Helpers.Domain;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace PsscProject.Models.Countries
     public class Country : IAggregateRoot
     {
         public Guid Id { get; protected set; }
-        public string Name { get; protected set; }
+        public PlainText Name { get; protected set; }
 
-        public static Country Create( string name)
+        public static Country Create(PlainText name)
         {
             Country country = new Country()
             {

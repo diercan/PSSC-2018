@@ -26,7 +26,7 @@ namespace PsscProject.ApplicationLayer.Users
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 return null;
 
-            var user = this.userRepository.FindOne(x => x.UserName == username);
+            var user = this.userRepository.FindOne(x => x.UserName.Text == username);
 
             if (user == null)
                 return null;

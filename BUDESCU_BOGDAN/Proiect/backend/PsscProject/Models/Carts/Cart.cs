@@ -1,5 +1,6 @@
 ﻿using PsscProject.Helpers.Domain;
 using PsscProject.Models.Customers;
+using PsscProject.Models.Generic;
 using PsscProject.Models.Products;
 using System;
 using System.Collections.Generic;
@@ -12,24 +13,19 @@ namespace PsscProject.Models.Carts
     public class Cart : IAggregateRoot
     {
         public Guid Id { get; protected set; }
-
         private List<CartProduct> cartProducts = new List<CartProduct>();
-
         public ReadOnlyCollection<CartProduct> Products
         {
             get { return cartProducts.AsReadOnly(); }
         }
-
         public Guid CustomerId { get; protected set; }
-
-        public decimal TotalCost
+        public Cost TotalCost
         {
             get
             {
-                return this.Products.Sum(cartProduct => cartProduct.Quantity * cartProduct.Cost);
+                return new Cost(this.Products.Sum(cartProduct => cartProduct.Quantity.Value * cartProduct.Cost.Value));
             }
         }
-
         public decimal TotalTax
         {
             get

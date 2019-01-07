@@ -1,4 +1,6 @@
 ﻿using PsscProject.Models.Carts;
+using PsscProject.Models.Generic;
+using PsscProject.Models.Products;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +12,7 @@ namespace PsscProject.Models.Purchases
     {
         public Guid PurchaseId { get; protected set; }
         public Guid ProductId { get; protected set; }
-        public int Quantity { get; protected set; }
+        public Quantity Quantity { get; protected set; }
 
         public static PurchasedProduct Create(Purchase purchase, CartProduct cartProduct)
         {

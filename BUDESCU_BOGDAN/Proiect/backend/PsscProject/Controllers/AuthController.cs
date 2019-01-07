@@ -41,7 +41,7 @@ namespace PsscProject.Controllers
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Name, user.UserName.Text),
                 new Claim(ClaimTypes.Role, "Manager")
             };
             var tokeOptions = new JwtSecurityToken(

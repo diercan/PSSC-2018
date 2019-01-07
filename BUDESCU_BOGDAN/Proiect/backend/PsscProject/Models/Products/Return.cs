@@ -1,4 +1,5 @@
 ﻿using PsscProject.Models.Customers;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ namespace PsscProject.Models.Products
     public class Return
     {
         public Guid Id { get; set; }
-        public Product Product { get; protected set; }
-        public Customer Customer { get; protected set; }
-        public ReturnReason Reason { get; protected set; }
-        public DateTime Created { get; protected set; }
-        public string Note { get; protected set; }
+        public Product Product { get; set; }
+        public Customer Customer { get; set; }
+        public ReturnReason Reason { get; set; }
+        public DateTime Created { get; set; }
+        public PlainText Note { get; set; }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using PsscProject.Helpers.Domain;
+using PsscProject.Models.Generic;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,9 +10,9 @@ namespace PsscProject.Models.Products
     public class ProductCode : IAggregateRoot
     {
         public Guid Id { get; protected set; }
-        public string Name { get; protected set; }
+        public PlainText Name { get; protected set; }
      
-        public static ProductCode Create(string name)
+        public static ProductCode Create(PlainText name)
         {
             ProductCode productCode = new ProductCode()
             {
