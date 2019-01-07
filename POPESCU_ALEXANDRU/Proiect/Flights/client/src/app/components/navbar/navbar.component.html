@@ -1,0 +1,26 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light mb-4">
+  <div class="container">
+    <a class="navbar-brand" href="#">HPH Flights</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav mr-auto">
+        <app-nav-link link="/home">Home</app-nav-link>
+        <app-nav-link link="/bookings" *ngIf="user?.role == 'CUSTOMER'">My Bookings</app-nav-link>
+        <app-nav-link link="/flights/manage" *ngIf="user?.role == 'ADMIN'">Manage Flights</app-nav-link>
+      </ul>
+
+      <ul class="navbar-nav">
+        <app-nav-link link="/login" *ngIf="!user">Login</app-nav-link>
+        <app-nav-link link="/register" *ngIf="!user">Register</app-nav-link>
+
+        <li class="nav-item" *ngIf="!!user">
+          <a class="nav-link" (click)="logout()">Logout</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

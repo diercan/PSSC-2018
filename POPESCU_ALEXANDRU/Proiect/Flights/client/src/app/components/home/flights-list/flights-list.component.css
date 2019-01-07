@@ -1,0 +1,15 @@
+.clickable:hover {
+  background: #e1e1e1;
+}
+.clickable {
+  cursor: pointer;
+}
+td:nth-child(5):hover {
+  cursor: pointer;
+  color: crimson;
+}
+
+td:nth-child(5) {
+  font-weight: 900;
+  font-size: 1.1em;
+}

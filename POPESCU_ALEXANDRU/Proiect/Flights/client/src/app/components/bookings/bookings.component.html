@@ -1,0 +1,23 @@
+<div class="container">
+  <h4>Bookings</h4>
+
+  <table class="table">
+    <thead class="thead-dark">
+    <tr>
+      <th scope="col">Date</th>
+      <th scope="col">Departure</th>
+      <th scope="col">Arrival</th>
+      <th scope="col"></th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let booking of bookings">
+      <td>{{ booking.flight.time | date:'medium' }}</td>
+      <td>{{ booking.flight.fromCity }}</td>
+      <td>{{ booking.flight.toCity }}</td>
+      <td (click)="removeBooking(booking.id)">&#10005;</td>
+    </tr>
+    </tbody>
+  </table>
+
+</div>

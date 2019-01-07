@@ -1,0 +1,10 @@
+spring:
+  datasource:
+    username: root
+    password:
+    url: jdbc:mysql://localhost:3306/hph
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create
+#    properties.hibernate.dialect: org.hibernate.dialect.MySQLDialect
