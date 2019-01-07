@@ -22,11 +22,13 @@ namespace Models.Client
 
         public Client(string nume, string prenume, int varsta, string adresa, int suma_cheltuita)
         {
+
             this.Nume = nume;
             this.Prenume = prenume;
             this.Varsta = varsta;
             this.Adresa = adresa;
             this.Suma_cheltuita = suma_cheltuita;
+
         }
     }
 }
