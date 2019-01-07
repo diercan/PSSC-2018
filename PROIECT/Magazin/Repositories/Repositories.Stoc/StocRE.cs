@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositories.Stoc
 {
-    class Program
+    class StocRE
     {
         static void Main(string[] args)
         {

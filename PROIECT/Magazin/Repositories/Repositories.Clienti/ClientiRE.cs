@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositories.Clienti
 {
-    class Program
+    class ClientiRE
     {
         static void Main(string[] args)
         {

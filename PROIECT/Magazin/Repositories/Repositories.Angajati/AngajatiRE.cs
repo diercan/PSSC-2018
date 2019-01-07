@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Repositories.Angajati
 {
-    class Program
+    class AngajatiRE
     {
         static void Main(string[] args)
         {
