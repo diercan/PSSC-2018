@@ -1,43 +1,46 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Mvc;
-using proiectPssc.Models;
+using System.Web;
+using System.Web.Mvc;
+using UPT.Data_Access_Layer;
+using UPT.ViewModels;
 
-namespace proiectPssc.Controllers
+namespace UPT.Controllers
 {
     public class HomeController : Controller
     {
-        public IActionResult Index()
+        private ContextUniversitate db = new ContextUniversitate();
+
+        public ActionResult Index()
         {
             return View();
         }
 
-        public IActionResult Produse()
+        public ActionResult About()
         {
-            ViewData["Message"] = "Your application description page.";
+            IQueryable<GrupDataInscriere> data = from student in db.Studenti
+                                                   group student by student.DataInscrierii into dataGrup
+                                                   select new GrupDataInscriere()
+                                                   {
+                                                       DataInscrierii = dataGrup.Key,
+                                                       NrStudenti = dataGrup.Count()
+                                                   };
+            return View(data.ToList());
 
-            return View();
         }
 
-        public IActionResult VizualizareComanda()
+        protected override void Dispose(bool disposing)
         {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
+            db.Dispose();
+            base.Dispose(disposing);
         }
 
-        public IActionResult Contact()
+        public ActionResult Contact()
         {
-            return View();
-        }
+            ViewBag.Message = "Your contact page.";
 
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
         }
     }
 }

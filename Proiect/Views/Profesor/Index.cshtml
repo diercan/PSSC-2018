@@ -1,0 +1,123 @@
+﻿@model UPT.ViewModels.ProfesorIndexData
+
+@{
+    ViewBag.Title = "Profesori";
+}
+
+<h2>Profesori</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>Nume</th>
+        <th>Prenume</th>
+        <th>Data angajarii</th>
+        <th>Cabinet</th>
+        <th>Cursuri</th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model.Profesori)
+{
+    string selectedRow = "";
+    if (item.ID == ViewBag.ID)
+    {
+        selectedRow = "success";
+    }
+    <tr class="@selectedRow">
+        <td>
+            @Html.DisplayFor(modelItem => item.Nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Prenume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataAngajarii)
+        </td>
+        <td>
+            @if (item.Cabinet != null)
+                {
+                @item.Cabinet.LocatieCabinet
+            }
+        </td>
+        <td>
+            @{
+                foreach (var curs in item.Cursuri)
+                {
+                    @:  @curs.Titlu <br />
+        }
+            }
+        </td>
+        <td>
+           @* @Html.ActionLink("Select", "Index", new { id = item.ID }) |*@
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+
+</table>
+
+@if (Model.Cursuri != null)
+{
+    <h3>Cursuri predate de profesorul selectat</h3>
+    <table class="table">
+        <tr>
+            <th></th>
+            <th>Numar</th>
+            <th>Titlu</th>
+            <th>Departament</th>
+        </tr>
+
+        @foreach (var item in Model.Cursuri)
+        {
+            string selectedRow = "";
+            if (item.IDCurs == ViewBag.IDCurs)
+            {
+                selectedRow = "success";
+            }
+            <tr class="@selectedRow">
+                <td>
+                    @Html.ActionLink("Select", "Index", new { IDCurs = item.IDCurs })
+                </td>
+                <td>
+                    @item.IDCurs
+                </td>
+                <td>
+                    @item.Titlu
+                </td>
+                <td>
+                    @item.Departament.Nume
+                </td>
+            </tr>
+        }
+
+    </table>
+}
+
+@if (Model.Inscriere != null)
+{
+    <h3>
+        Studenti inscrisi la cursul selectat
+    </h3>
+    <table class="table">
+        <tr>
+            <th>Nume</th>
+            <th>Nota</th>
+        </tr>
+        @foreach (var item in Model.Inscriere)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Student.NumeIntreg)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Nota)
+                </td>
+            </tr>
+        } 
+    </table>
+}

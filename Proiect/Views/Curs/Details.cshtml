@@ -1,0 +1,42 @@
+﻿@model UPT.Models.Curs
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Curs</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Departament.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Departament.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Titlu)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Titlu)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Credite)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Credite)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IDCurs }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

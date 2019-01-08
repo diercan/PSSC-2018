@@ -1,0 +1,30 @@
+﻿@model IEnumerable<UPT.ViewModels.GrupDataInscriere>
+
+@{
+    ViewBag.Title = "Statistici studenti";
+}
+
+<h2>Statistici studenti</h2>
+
+<table>
+    <tr>
+        <th>
+            Data_inscrierii
+        </th>
+        <th>
+            Studenti
+        </th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataInscrierii)
+            </td>
+            <td>
+                @item.NrStudenti
+            </td>
+        </tr>
+    }
+</table>

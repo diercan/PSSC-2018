@@ -1,0 +1,51 @@
+﻿@model UPT.Models.Departament
+
+@{
+    ViewBag.Title = "Departamente";
+}
+
+<h2>Departamente</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nume)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Buget)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataInceperii)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IDProfesor)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nume)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Buget)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataInceperii)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IDProfesor)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IDDepartament }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IDDepartament }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IDDepartament })
+        </td>
+    </tr>
+}
+
+</table>

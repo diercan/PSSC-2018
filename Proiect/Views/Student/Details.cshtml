@@ -1,0 +1,75 @@
+﻿@model UPT.Models.Student
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataInscrierii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataInscrierii)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Inscrieri)
+        </dt>
+        <dd>
+            @foreach (var item in Model.Inscrieri)
+            {
+
+                if (item != null)
+                {
+                    @Html.Partial("_ProductDetail", item)
+                }
+
+            }
+
+            <table class="table">
+                <tr>
+                    <th>Curs</th>
+                    <th>Nota</th>
+                </tr>
+                @foreach (var item in Model.Inscrieri)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Curs.Titlu)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Nota)
+                        </td>
+                    </tr>
+                }
+            </table>
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
