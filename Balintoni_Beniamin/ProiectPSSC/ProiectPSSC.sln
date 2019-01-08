@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2010
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProiectPSSC", "ProiectPSSC\ProiectPSSC.csproj", "{7E7908BB-A309-4E92-BB6F-FE52B0CF122F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProiectPSSC.Tests", "ProiectPSSC.Tests\ProiectPSSC.Tests.csproj", "{D0877BA8-DD53-4D2A-806E-9F3DA5C6A721}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7E7908BB-A309-4E92-BB6F-FE52B0CF122F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E7908BB-A309-4E92-BB6F-FE52B0CF122F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E7908BB-A309-4E92-BB6F-FE52B0CF122F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E7908BB-A309-4E92-BB6F-FE52B0CF122F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0877BA8-DD53-4D2A-806E-9F3DA5C6A721}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0877BA8-DD53-4D2A-806E-9F3DA5C6A721}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0877BA8-DD53-4D2A-806E-9F3DA5C6A721}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0877BA8-DD53-4D2A-806E-9F3DA5C6A721}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {D2CD4071-3AC5-4DBF-B8EF-51BD29BFF8F0}
+	EndGlobalSection
+EndGlobal
