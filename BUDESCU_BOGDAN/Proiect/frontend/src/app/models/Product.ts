@@ -8,8 +8,9 @@ export class Product {
     public cost: number;
     public productCodeId: string;
     public productCodeName: string;
-//use name,active,quantity,cost 
-    constructor(id: string, name: string, created: Date, modified: string, active: boolean, quantity: number, cost: number, productCodeId: string, productCodeName: string) {
+    public description : string;
+    public image : string;
+    constructor(id: string, name: string, created: Date, modified: string, active: boolean, quantity: number, cost: number, productCodeId: string, productCodeName: string,description:string,image : string) {
         this.id = id;
         this.name = name;
         this.created = created;
@@ -19,5 +20,7 @@ export class Product {
         this.cost = cost;
         this.productCodeId = productCodeId;
         this.productCodeName = productCodeName;
+        this.description = description;
+        this.image = image;
     }
 }

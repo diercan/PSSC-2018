@@ -1,0 +1,139 @@
+<div class="container demo-container">
+  <div class="row" style="margin-bottom: 15px;">
+    <div class="col-sm-12">
+      <h4>
+        Data about products
+      </h4>
+    </div>
+  </div>
+
+  <div class="row" style="margin-bottom: 15px;">
+    <div class="col-sm-12">
+      <button class="btn btn-primary" (click)="showCreateProduct()" id="btn_create_customer">
+        {{buttonMessage_1}}
+      </button>
+    </div>
+  </div>
+
+  <div *ngIf="sharedService.isLoggedIn == true && sharedService.role == 'Manager'">
+    <div class="row" style="margin-bottom: 15px;" *ngIf="showCreateProductForm">
+      <!-- ============================ CREATE PRODUCT FORM ============================ -->
+      <div class="col-sm-8">
+        <form #createProductForm="ngForm" (ngSubmit)="onSubmitCreateProductForm()">
+    
+          <div class="mb-3">
+            <label>Name product</label>
+            <input type="text" class="form-control" [(ngModel)]="createUserModel.name" #name="ngModel" name="name"
+              required>
+          </div>
+          <div class="mb-3">
+            <label>Quantity</label>
+            <input type="text" class="form-control" [(ngModel)]="createUserModel.quantity" #name="ngModel" name="quantity"
+              required>
+          </div>
+          <div class="mb-3">
+            <label>Cost</label>
+            <input type="text" class="form-control" [(ngModel)]="createUserModel.cost" #name="ngModel" name="cost"
+              required>
+          </div>
+          <div class="mb-3">
+            <label>Description</label>
+            <textarea type="text" class="form-control" [(ngModel)]="createUserModel.description" #name="ngModel" name="description" mdbInputDirective
+              required>
+            </textarea>
+          </div>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-success" [disabled]="!createProductForm.form.valid">Save </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-sm-4 portofolio-item" [hidden]="!(i<indexPage * 6 && i>=(indexPage - 1) * 6)" *ngFor="let product of products;let i=index" style="text-align: center">
+      <div *ngIf="i<indexPage * 6 && i>=(indexPage - 1) * 6">
+        <div class="card ">
+            <h4 class="card-title">
+                <a href="#">{{product.name}}</a>
+              </h4>
+          <img  *ngIf="product.image" src={{product.image}} style="width:100%;height:auto">
+          <img *ngIf="!product.image" src='assets/unavailable-image.jpg'style="width:100%;height:auto">
+          <div class="card-body">
+            <div class="card-text">
+              <p>Quantity: {{product.quantity}}</p>
+              <p>Cost: {{product.cost}}</p>
+              <p>Description: {{product.description}}</p>
+            </div>
+            <div *ngIf="sharedService.isLoggedIn == true && sharedService.role != 'Manager'" class="text-center social-btn">
+              <button *ngIf="!selectedProducts.includes(i)" class="btn btn-primary btn-lg btn-block" (click)="AddProduct(i)">Add to cart</button>
+              <button *ngIf="selectedProducts.includes(i)" class="btn btn-danger btn-lg btn-block" (click)="DeleteProductCustomer(i)">Delete from cart</button>
+            </div>
+            <div *ngIf="sharedService.isLoggedIn == true && sharedService.role == 'Manager'" class="text-center social-btn">
+              <table class="text-center table">
+                <tr>
+                  <td colspan=6>
+                    <button *ngIf="!selectedProducts.includes(i)" class="btn btn-primary btn-lg btn-block" (click)="showUpdateProduct(product)">Update</button>
+                  </td>
+                  <td colspan=6>
+                     <button *ngIf="!selectedProducts.includes(i)" class="btn btn-danger btn-lg btn-block" (click)="deleteProductManager(product.id)">Delete</button>                   
+                  </td>
+                </tr>
+                <tr *ngIf="updateUserModel?.id == product.id">
+                  <td colspan=12>
+                    <!-- ============================ UPDATE PRODUCT FORM ============================ -->
+                    <div class="col-sm-12" style="margin:auto;width:100%;text-align:left">
+                      <form #updateProductForm="ngForm" (ngSubmit)="onSubmitUpdateProductForm()">
+                        <div class="mb-3">
+                          <label>name</label>
+                          <input type="text" class="form-control" [(ngModel)]="updateUserModel.name" #name="ngModel" name="name"
+                            required>
+                        </div>
+                        <div class="mb-3">
+                          <label>Quantity</label>
+                          <input type="text" class="form-control" [(ngModel)]="updateUserModel.quantity" #name="ngModel" name="quantity"
+                            required>
+                        </div>
+                        <div class="mb-3">
+                          <label>Cost</label>
+                          <input type="text" class="form-control" [(ngModel)]="updateUserModel.cost" #name="ngModel" name="cost"
+                            required>
+                        </div>
+                        <div class="mb-3">
+                          <button type="submit" class="btn btn-success" [disabled]="!updateProductForm.form.valid">Update
+                          </button>
+                        </div>
+                      </form>
+                    </div>
+                  </td>
+                  </tr>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <ul class="pagination justify-content-center">
+    <li class="page-item">
+      <a class="page-link" aria-label="Previous" (click)="PreviousButton()">
+        <span aria-hidden="true">&laquo;</span>
+        <span class="sr-only">Previous</span>
+      </a>
+    </li>
+    <li  *ngFor="let product of products;let i=index" class="page-item" (click)="indexPage=i/6+1">
+      <a *ngIf="i%6 == 0 && (i/6 +1)==indexPage" style ="background:cadetblue" class="page-link">{{i/6 +1}}</a>
+      <a *ngIf="i%6 == 0 && (i/6 +1)!=indexPage" class="page-link">{{i/6 +1}}</a>
+      
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" aria-label="Next" (click)="NextButton()">
+        <span aria-hidden="true">&raquo;</span>
+        <span class="sr-only">Next</span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,5 +1,6 @@
 import { Component, OnInit, SimpleChanges, OnChanges, AfterViewInit, OnDestroy } from '@angular/core';
 import { HttpService } from 'src/app/services/http/http.service';
+import { SharedService } from 'src/app/services/shared/shared.service';
 import { Product } from 'src/app/models/Product';
 
 @Component({
@@ -21,31 +22,37 @@ export class ProductComponent  {
   public indexProduct = 0;
   public array : any[]=[1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
   public indexPage = 1;
-  public products : any[] = [
-                            { image : 'assets/laptop1.jpg',
-                              name : 'Laptop ASUS ZenBook UX430UA-GV183T',
-                              procesor :'Intel Core I5-7000U'
-                            },
-                            {
-                              image : 'assets/laptop2.jpg',
-                              name : 'Laptop ASUS ZenBook 13 UX331UN-C4088T',
-                              procesor : 'Intel Core I5-8550U'
-                            },
-                            {
-                              image :'assets/laptop3.jpg',
-                              name : 'Notebook Asus K555lb - dm451t',
-                              procesor : 'Intel Core I7-8550U',
-                            }
-                            ];
-  public product: Product[] = [];
+  // public products : any[] = [
+  //                           {
+  //                             image : 'assets/laptop1.jpg',
+  //                             name : 'Laptop ASUS ZenBook UX430UA-GV183T',
+  //                             quantity:'500 pieces',
+  //                             cost: '2400 RON'
+  //                           },
+  //                           {
+  //                             image : 'assets/laptop2.jpg',
+  //                             name : 'Laptop ASUS ZenBook 13 UX331UN-C4088T',
+  //                             quantity:'10 pieces',
+  //                             cost : '3600 RON'
+  //                           },
+  //                           {
+  //                             image :'assets/laptop3.jpg',
+  //                             name : 'Notebook Asus K555lb - dm451t',
+  //                             quantity:'200 pieces',
+  //                             cost : '3200 RON'
+  //                           }
+  //                           ];
+  public products: Product[] = [];
   public showCreateProductForm: boolean = false;
-  public createUserModel: Product = new Product("","",new Date(),"",true,null,null,"","");
-  public updateUserModel: Product = new Product("","",new Date(),"",true,null,null,"","");
+  public createUserModel: Product = new Product("","",new Date(),"",true,null,null,"","","","");
+  public updateUserModel: Product = new Product("","",new Date(),"",true,null,null,"","","","");
 
   public buttonMessage_1: string = "Show Create Product Form";
-  constructor(private httpService : HttpService) {
+  constructor(private httpService : HttpService,
+              public sharedService : SharedService) {
     this.getProducts();
    }
+
 
    public AddProduct(index:number)
    {
@@ -53,7 +60,7 @@ export class ProductComponent  {
      this.selectedProducts.push(index);
    }
 
-   public DeleteProduct(index:number)
+   public DeleteProductCustomer(index:number)
    {
      this.indexProduct ++;
      console.log(this.selectedProducts);
@@ -67,7 +74,7 @@ export class ProductComponent  {
    }
 
    public NextButton() {
-    if (this.indexPage < (this.array.length-1) / 5) {
+    if (this.indexPage < (this.products.length-1) / 6) {
       this.indexPage++;
     }
   }
@@ -81,11 +88,11 @@ export class ProductComponent  {
 
   public getProducts() {
     this.httpService.getProducts().subscribe((result: Product[]) => {
-      this.product = result;
+      this.products = result;
     });
   }
 
-  public deleteProduct(id: string) {
+  public deleteProductManager(id: string) {
 
     this.httpService.deleteProduct(id).subscribe((result) => {
       this.getProducts();
@@ -108,9 +115,9 @@ export class ProductComponent  {
   public showUpdateProduct(product: Product) {
 
     if (this.updateUserModel.id == product.id) {
-      this.updateUserModel = new Product("","",new Date(),"",true,null,null,"","");
+      this.updateUserModel = new Product("","",new Date(),"",true,null,null,"","","","");
     } else if (this.updateUserModel.id !=  product.id) {
-      this.updateUserModel = new Product(product.id,product.name,product.created,product.modified,product.active,product.quantity,product.cost,product.productCodeId,product.productCodeName);
+      this.updateUserModel = new Product(product.id,product.name,product.created,product.modified,product.active,product.quantity,product.cost,product.productCodeId,product.productCodeName,product.description,product.image);
     }
   
   }
