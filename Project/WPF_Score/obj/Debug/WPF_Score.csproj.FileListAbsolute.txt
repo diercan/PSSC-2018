@@ -1,0 +1,49 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe.config
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\bin\Debug\WPF_Score.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csprojResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\MainWindow.baml
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\MainWindow.g.cs
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\App.g.cs
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score_MarkupCompile.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.g.resources
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.Properties.Resources.resources
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.GenerateResource.Cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.exe
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\obj\Debug\WPF_Score.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe.config
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csprojAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\MainWindow.baml
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\MainWindow.g.cs
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\App.g.cs
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score_MarkupCompile.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.g.resources
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.Properties.Resources.resources
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.GenerateResource.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.CoreCompileInputs.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.CopyComplete
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.exe
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe.config
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.exe
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\bin\Debug\WPF_Score.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\MainWindow.baml
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\MainWindow.g.cs
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\App.g.cs
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score_MarkupCompile.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.g.resources
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.Properties.Resources.resources
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.GenerateResource.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.csproj.CopyComplete
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.exe
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_Score\obj\Debug\WPF_Score.pdb

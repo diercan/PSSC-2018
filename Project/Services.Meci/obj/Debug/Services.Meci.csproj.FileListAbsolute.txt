@@ -1,0 +1,11 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Meci\bin\Debug\Services.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Meci\bin\Debug\Services.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Meci\obj\Debug\ResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Meci\obj\Debug\Services.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Meci\obj\Debug\Services.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\bin\Debug\Services.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\bin\Debug\Services.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\obj\Debug\Services.Meci.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\obj\Debug\Services.Meci.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\obj\Debug\Services.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Meci\obj\Debug\Services.Meci.pdb

@@ -1,0 +1,11 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Echipa\bin\Debug\Services.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Echipa\bin\Debug\Services.Echipa.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Echipa\obj\Debug\ResolveAssemblyReference.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\bin\Debug\Services.Echipa.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\bin\Debug\Services.Echipa.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\Services.Echipa\obj\Debug\Services.Echipa.pdb

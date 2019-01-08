@@ -1,0 +1,35 @@
+﻿<Window x:Class="WPF_Score.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Meci de baschet" Height="428.019" Width="746.053" Loaded="Window_Loaded">
+
+    <Grid Margin="0,0,0,5" HorizontalAlignment="Left" Width="736">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="28*"/>
+            <RowDefinition Height="39*"/>
+            <RowDefinition Height="42*"/>
+            <RowDefinition Height="51*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="128*"/>
+            <ColumnDefinition Width="130*"/>
+            <ColumnDefinition Width="131*"/>
+            <ColumnDefinition Width="128*"/>
+        </Grid.ColumnDefinitions>
+        <Label Content="   Gazde" HorizontalAlignment="Left" Margin="19,39,0,0" VerticalAlignment="Top" Height="41" Width="130" FontSize="22" FontWeight="Bold" Grid.RowSpan="2"/>
+        <Label Content="    Oaspeți" Grid.Column="3" Margin="0,39,19,0" VerticalAlignment="Top" Height="41" FontSize="22" FontWeight="Bold" RenderTransformOrigin="1.129,0.551" HorizontalAlignment="Right" Width="130" Grid.RowSpan="2"/>
+        <TextBox x:Name="TextBox_Home" HorizontalAlignment="Left" Height="58" Margin="169,22,0,0" TextWrapping="Wrap" Text="{Binding ScoreHome}" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Grid.RowSpan="2" IsEnabled="False"/>
+        <TextBox x:Name="TextBox_Guest" Grid.Column="2" HorizontalAlignment="Right" Height="58" Margin="0,22,154,0" TextWrapping="Wrap" Text="{Binding ScoreGuest}" VerticalAlignment="Top" Width="120" FontSize="24" FontWeight="Bold" Grid.ColumnSpan="2" Grid.RowSpan="2" IsEnabled="False"/>
+        <Button x:Name="ButtonAdd_Home" Content="2 puncte" HorizontalAlignment="Center" Margin="155,5,52,0" Grid.Row="2" Width="160" FontSize="36" FontWeight="Bold" Click="ButtonAdd_Home_Click" Grid.ColumnSpan="2" Height="64" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonAdd_Guest" Content="2 puncte" Grid.Column="2" Margin="69,5,140,0" Grid.Row="2" FontSize="36" FontWeight="Bold" Click="ButtonAdd_Guest_Click" Grid.ColumnSpan="2" Height="64" VerticalAlignment="Top"/>
+        <Button x:Name="ButtonMinus_Home" Content="3 puncte" HorizontalAlignment="Center" Margin="153,74,51,0" Grid.Row="2" VerticalAlignment="Top" Width="161" Height="64" FontSize="36" FontWeight="Bold" Click="ButtonAdd3_Home_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button Content="3 puncte" Grid.Column="2" HorizontalAlignment="Right" Margin="0,74,140,0" Grid.Row="2" VerticalAlignment="Top" Width="160" Height="64" FontSize="36" FontWeight="Bold" Click="ButtonAdd3_Guest_Click" Grid.ColumnSpan="2" Grid.RowSpan="2"/>
+        <Button x:Name="ButtonAdd1Point_Home" Content="1 punct" HorizontalAlignment="Center" Margin="154,32,51,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Height="64" FontSize="36" FontWeight="Bold" Click="ButtonAdd1_Home_Click" Grid.ColumnSpan="2"/>
+        <Button x:Name="ButtonAdd1Point_Guest" Content="1 punct" HorizontalAlignment="Right" Margin="0,32,140,0" Grid.Row="1" VerticalAlignment="Top" Width="160" Height="64" FontSize="36" FontWeight="Bold" Click="ButtonAdd1_Guest_Click" Grid.ColumnSpan="2" Grid.Column="2"/>
+        <Button x:Name="ButtonMinus_Home_Copy" Content="Reset" HorizontalAlignment="Center" Margin="24,65,33,0" Grid.Row="3" VerticalAlignment="Top" Width="125" Height="29" Click="ButtonAdd3_Reset_Click" FontSize="18"/>
+        <TextBlock Name="TBCountDown" Grid.Column="1" HorizontalAlignment="Left" Margin="138,46,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="114" Grid.ColumnSpan="2" Grid.Row="3" Height="69"/>
+        <Button Content="Start" Grid.Column="2" HorizontalAlignment="Right" Margin="0,46,57,0" Grid.Row="3" VerticalAlignment="Top" Width="160" Height="64" FontSize="36" FontWeight="Bold" Click="Timer_Tick" Grid.ColumnSpan="2"/>
+
+
+    </Grid>
+</Window>

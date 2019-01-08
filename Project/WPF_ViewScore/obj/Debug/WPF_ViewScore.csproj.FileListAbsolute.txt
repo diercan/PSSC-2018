@@ -1,0 +1,57 @@
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe.config
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.baml
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.g.cs
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\App.g.cs
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore_MarkupCompile.cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.g.resources
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.Properties.Resources.resources
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.GenerateResource.Cache
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.exe
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.exe
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.dll
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.pdb
+D:\FACULTATE\Anul IV\Semestrul 1\PSSC\Proiect_PSSC\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csprojResolveAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe.config
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.exe
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.exe.config
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csprojAssemblyReference.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.baml
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.g.cs
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\App.g.cs
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore_MarkupCompile.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.g.resources
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.Properties.Resources.resources
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.GenerateResource.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.CoreCompileInputs.cache
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.CopyComplete
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.exe
+C:\Users\40731\Downloads\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe.config
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.exe
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_ViewScore.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.exe
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.dll
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\WPF_Score.exe.config
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\bin\Debug\Modele.Meci.pdb
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csprojAssemblyReference.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.baml
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\MainWindow.g.cs
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\App.g.cs
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore_MarkupCompile.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.g.resources
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.Properties.Resources.resources
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.GenerateResource.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.CoreCompileInputs.cache
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.csproj.CopyComplete
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.exe
+C:\Users\40731\Desktop\Primary_Function\Primary_Function\WPF_ViewScore\obj\Debug\WPF_ViewScore.pdb
