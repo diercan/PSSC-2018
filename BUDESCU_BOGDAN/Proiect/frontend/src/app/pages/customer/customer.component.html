@@ -18,7 +18,7 @@
     <!-- ============================ CREATE CUSTOMER FORM ============================ -->
     <div class="col-sm-8">
       <form #createCustomerForm="ngForm" (ngSubmit)="onSubmitCreateCustomerForm()">
-  
+
         <div class="mb-3">
           <label>First Name</label>
           <input type="text" class="form-control" [(ngModel)]="createUserModel.firstName" #name="ngModel" name="firstName"
@@ -32,6 +32,36 @@
         <div class="mb-3">
           <label>Email</label>
           <input type="text" class="form-control" [(ngModel)]="createUserModel.email" #name="ngModel" name="email"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Username</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.userName" #name="ngModel" name="userName"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Password</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.password" #name="ngModel" name="password"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Street</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.street" #name="ngModel" name="street"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Zipcode</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.zipCode" #name="ngModel" name="zipCode"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>City</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.city" #name="ngModel" name="city"
+            required>
+        </div>
+        <div class="mb-3">
+          <label>Image</label>
+          <input type="text" class="form-control" [(ngModel)]="createUserModel.city" #name="ngModel" name="image"
             required>
         </div>
         <div class="mb-3">
@@ -50,11 +80,13 @@
       </thead>
       <tbody *ngFor="let customer of customers">
         <tr>
-          <td style="width:10%">{{customer.id}}</td>
-          <td style="width:20%">{{customer.firstName}}</td>
-          <td style="width:20%">{{customer.lastName}}</td>
-          <td style="width:20%">{{customer.email}}</td>
-          <td style="width:20%">{{customer.countryId}}</td>
+          <td style="width:10%">{{customer.firstName}}</td>
+          <td style="width:10%">{{customer.lastName}}</td>
+          <td style="width:10%">{{customer.email}}</td>
+          <td style="width:20%">{{customer.userName}}</td>
+          <td style="width:20%">{{customer.password}}</td>
+          <td style="width:20%">{{customer.street}},{{customer.city}},{{customer.zipCode}}</td>
+          <td><img src={{customer.image}} style="height: 70px"></td>
           <td style="width:30%">
             <button mat-raised-button color="warn" (click)="deleteCustomer(customer.id)">Delete</button>
           </td>
@@ -81,6 +113,36 @@
                 <div class="mb-3">
                   <label>Email</label>
                   <input type="text" class="form-control" [(ngModel)]="updateUserModel.email" #name="ngModel" name="email"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Username</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.userName" #name="ngModel" name="userName"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Password</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.password" #name="ngModel" name="password"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Street</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.street" #name="ngModel" name="street"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Zipcode</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.zipCode" #name="ngModel" name="zipCode"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>City</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.city" #name="ngModel" name="city"
+                    required>
+                </div>
+                <div class="mb-3">
+                  <label>Image</label>
+                  <input type="text" class="form-control" [(ngModel)]="updateUserModel.image" #name="ngModel" name="image"
                     required>
                 </div>
                 <div class="mb-3">

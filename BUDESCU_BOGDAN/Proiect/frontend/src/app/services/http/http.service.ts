@@ -6,6 +6,7 @@ import { SignUp } from 'src/app/models/SignUp';
 import { SignIn } from 'src/app/models/SignIn';
 import { Customer } from 'src/app/models/Customer';
 import {Product} from 'src/app/models/Product';
+import { SharedService } from 'src/app/services/shared/shared.service';
 
 @Injectable({
   providedIn: 'root'
@@ -48,6 +49,18 @@ export class HttpService {
   }
 
   public updateCustomer(customer: Customer) {
+
+    let body = JSON.stringify(customer);
+    let options = {
+      headers: new HttpHeaders({
+        'Content-Type': 'application/json',
+        'Authorization': "Bearer " + localStorage.getItem('token') || ''
+      })
+    };
+    return this.http.put(`${this.server}/api/customer/${customer.id}`, body, options);
+  }
+
+  public updateDataCustomer(customer: Customer) {
 
     let body = JSON.stringify(customer);
     let options = {

@@ -12,16 +12,18 @@ import { Route, Router } from '@angular/router';
 export class CustomerComponent {
 
   public tableHead = [
-    { name: "Id", colspan: 1 },
     { name: "firstName", colspan: 1 },
     { name: "lastName", colspan: 1 },
     { name: "email", colspan: 1 },
-    { name: "countryId", colspan: 2 }
+    { name: "userName", colspan: 2 },
+    { name: "password", colspan: 2 },
+    { name: "adress", colspan: 2 },
+    { name: "image", colspan: 2 }
   ];
   public customers: Customer[] = [];
   public showCreateCustomerForm: boolean = false;
-  public createUserModel: Customer = new Customer("","","","","");
-  public updateUserModel: Customer = new Customer("","Budescu","Bogdan","bude@gmail.com","");
+  public createUserModel: Customer = new Customer("","","","","","","","","","","");
+  public updateUserModel: Customer = new Customer("","Budescu","Bogdan","bude@gmail.com","","","","","","","");
 
   public buttonMessage_1: string = "Show Create Customer Form";
   constructor(
@@ -36,7 +38,7 @@ export class CustomerComponent {
       this.router.navigateByUrl('/products')
     }
    }
-
+ 
   public getCustomers() {
     this.httpService.getCustomers().subscribe((result: Customer[]) => {
       this.customers = result;
@@ -66,9 +68,11 @@ export class CustomerComponent {
   public showUpdateCustomer(customer: Customer) {
 
     if (this.updateUserModel.id == customer.id) {
-      this.updateUserModel = new Customer("99","Budescu","Bogdan","bude@gmail.com","");
+      this.updateUserModel = new Customer("99","Budescu","Bogdan","bude@gmail.com","","","","","","","");
     } else if (this.updateUserModel.id !=  customer.id) {
-      this.updateUserModel = new Customer(customer.id,customer.firstName,customer.lastName,customer.email,customer.countryId)
+      this.updateUserModel = new Customer(customer.id,customer.firstName,customer.lastName,customer.email,
+                             customer.countryId,customer.userName,customer.password,customer.street,
+                             customer.zipCode,customer.city,customer.image);
     }
   
   }
