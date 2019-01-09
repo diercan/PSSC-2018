@@ -14,6 +14,7 @@
       </ul>
 
       <ul class="navbar-nav">
+        <app-nav-link link="/events" *ngIf="user?.role == 'ADMIN'">Event Sourcing</app-nav-link>
         <app-nav-link link="/login" *ngIf="!user">Login</app-nav-link>
         <app-nav-link link="/register" *ngIf="!user">Register</app-nav-link>
 

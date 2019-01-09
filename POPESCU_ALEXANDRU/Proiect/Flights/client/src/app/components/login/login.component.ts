@@ -1,6 +1,6 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, OnInit, ViewChild} from "@angular/core";
 import {NgForm} from "@angular/forms";
-import {AuthService} from "../../services/auth.service";
+import {AuthService} from '../../services/auth.service';
 
 @Component({
   selector: 'app-login',

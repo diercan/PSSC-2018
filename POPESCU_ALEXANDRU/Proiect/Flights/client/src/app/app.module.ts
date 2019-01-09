@@ -17,6 +17,7 @@ import { FlightsListComponent } from './components/home/flights-list/flights-lis
 import { BookingsComponent } from './components/bookings/bookings.component';
 import {AuthHttpInterceptor} from "./configs/auth-http-interceptor.service";
 import { ManageFlightsComponent } from './components/manage-flights/manage-flights.component';
+import { EventComponent } from './components/event/event.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { ManageFlightsComponent } from './components/manage-flights/manage-fligh
     NavLinkComponent,
     FlightsListComponent,
     BookingsComponent,
-    ManageFlightsComponent
+    ManageFlightsComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
