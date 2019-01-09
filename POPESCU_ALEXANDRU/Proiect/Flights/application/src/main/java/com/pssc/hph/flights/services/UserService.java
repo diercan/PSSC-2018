@@ -1,10 +1,12 @@
 package com.pssc.hph.flights.services;
 
 import com.pssc.hph.flights.configs.WebSecurityConfiguration;
+import com.pssc.hph.flights.entities.Event;
 import com.pssc.hph.flights.entities.Role;
 import com.pssc.hph.flights.entities.User;
 import com.pssc.hph.flights.exceptions.BadRequestFlightsException;
 import com.pssc.hph.flights.exceptions.NotFoundFlightsException;
+import com.pssc.hph.flights.repositories.EventRepository;
 import com.pssc.hph.flights.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import lombok.val;
@@ -12,11 +14,13 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 
 import java.security.Principal;
+import java.time.LocalDateTime;
 
 @Service
 @RequiredArgsConstructor
 public class UserService {
     private final UserRepository userRepository;
+    private final EventRepository eventRepository;
 
     public User getUser(final String username) {
         return userRepository.findByUsername(username).orElseThrow(NotFoundFlightsException::new);
@@ -29,6 +33,13 @@ public class UserService {
                 user.getPassword() == null || user.getPassword().length() < 3) {
             throw new BadRequestFlightsException();
         }
+        eventRepository.save(Event.builder()
+                        .type("create")
+                        .details("user " + user.getUsername() +" has been registered")
+                        .timestamp(LocalDateTime.now())
+//                        .user(user.getId())
+                        .build()
+        );
 
         if(userRepository.findByEmail(user.getEmail()).isPresent() || userRepository.findByUsername(user.getUsername()).isPresent()) {
             throw new BadRequestFlightsException();
@@ -42,7 +53,17 @@ public class UserService {
         out.setUsername(user.getUsername());
         out.setRole(Role.CUSTOMER);
 
+//        eventRepository.save(Event.builder()
+//                .type("delete")
+//                .details("delete a flight")
+//                .timestamp(LocalDateTime.now())
+//                .user(getPrincipal())
+//                .build()
+//        );
         return userRepository.save(out);
+
+
+
     }
 
     public User getPrincipal() {

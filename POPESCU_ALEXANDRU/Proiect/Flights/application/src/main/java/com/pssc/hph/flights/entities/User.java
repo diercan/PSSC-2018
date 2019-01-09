@@ -26,6 +26,9 @@ public class User {
     @JsonIgnore
     @OneToMany(mappedBy = "user")
     private List<Booking> bookings;
+    @JsonIgnore
+    @OneToMany(mappedBy = "user")
+    private List<Event> events;
     @Enumerated(EnumType.STRING)
     private Role role;
 }
