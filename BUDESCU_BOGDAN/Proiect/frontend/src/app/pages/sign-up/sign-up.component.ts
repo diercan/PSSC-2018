@@ -1,6 +1,5 @@
 import { Component, OnInit, SimpleChanges, OnChanges, AfterViewInit, OnDestroy, ViewChild } from '@angular/core';
 import { SignUp } from 'src/app/models/SignUp';
-import { CryptoService } from 'src/app/services/crypto/crypto.service';
 import { NgForm } from '@angular/forms';
 import { HttpService } from 'src/app/services/http/http.service';
 import { HttpErrorResponse } from '@angular/common/http';

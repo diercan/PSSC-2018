@@ -1,6 +1,5 @@
 import { Component, OnInit, SimpleChanges, OnChanges, AfterViewInit, OnDestroy } from '@angular/core';
 import { SignIn } from 'src/app/models/SignIn';
-import { CryptoService } from 'src/app/services/crypto/crypto.service';
 import { HttpService } from 'src/app/services/http/http.service';
 import { HttpErrorResponse } from '@angular/common/http';
 import { SharedService } from 'src/app/services/shared/shared.service';

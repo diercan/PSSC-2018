@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SharedService } from 'src/app/services/shared/shared.service';
 
 @Component({
   selector: 'app-bag',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BagComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    public sharedService : SharedService
+  ) { }
 
   ngOnInit() {
   }

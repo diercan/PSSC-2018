@@ -10,6 +10,10 @@ export class Customer {
     public zipCode: string;
     public city: string;
     public image: string;
+    public user : {
+        username: string,
+        password:string,
+    }
     constructor(id: string, firstName: string, lastName: string, email: string, countryId: string, userName: string, password: string, street: string, zipCode: string, city: string, image: string) {
         this.id = id;
         this.firstName = firstName;

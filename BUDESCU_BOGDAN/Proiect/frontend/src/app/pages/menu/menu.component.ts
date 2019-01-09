@@ -1,6 +1,7 @@
 import { Component, OnInit, SimpleChanges, OnChanges, AfterViewInit, OnDestroy } from '@angular/core';
 import { SharedService } from 'src/app/services/shared/shared.service';
 import * as jwt_decode from "jwt-decode";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-menu',
@@ -10,7 +11,8 @@ import * as jwt_decode from "jwt-decode";
 export class MenuComponent {
 
   constructor(
-    public sharedService : SharedService
+    public sharedService : SharedService,
+    public router : Router,
     
   ) { }
 
@@ -37,5 +39,6 @@ export class MenuComponent {
     this.sharedService.isLoggedIn = false;
     localStorage.removeItem('token');
     this.sharedService.getUserName();
+    this.router.navigateByUrl('/sign-in');
   }
 }

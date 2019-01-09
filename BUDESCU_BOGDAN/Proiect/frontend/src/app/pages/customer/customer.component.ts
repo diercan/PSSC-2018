@@ -15,10 +15,9 @@ export class CustomerComponent {
     { name: "firstName", colspan: 1 },
     { name: "lastName", colspan: 1 },
     { name: "email", colspan: 1 },
-    { name: "userName", colspan: 2 },
-    { name: "password", colspan: 2 },
-    { name: "adress", colspan: 2 },
-    { name: "image", colspan: 2 }
+    { name: "userName", colspan: 1 },
+    { name: "adress", colspan: 1 },
+    { name: "image", colspan: 1 }
   ];
   public customers: Customer[] = [];
   public showCreateCustomerForm: boolean = false;
@@ -42,6 +41,10 @@ export class CustomerComponent {
   public getCustomers() {
     this.httpService.getCustomers().subscribe((result: Customer[]) => {
       this.customers = result;
+      this.customers.forEach(res=>{
+        res.userName = res.user.username;
+        res.password = res.user.password;
+      })
     });
   }
 

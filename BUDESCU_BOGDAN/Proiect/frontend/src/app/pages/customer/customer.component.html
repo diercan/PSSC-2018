@@ -41,7 +41,7 @@
         </div>
         <div class="mb-3">
           <label>Password</label>
-          <input type="text" class="form-control" [(ngModel)]="createUserModel.password" #name="ngModel" name="password"
+          <input type="password" class="form-control" [(ngModel)]="createUserModel.password" #name="ngModel" name="password"
             required>
         </div>
         <div class="mb-3">
@@ -72,10 +72,11 @@
   </div>
 
   <div class="table-responsive">
-    <table class="table table-striped table-sm" style="text-align: center;">
+    <table class="table table-striped table-sm table-bordered" style="text-align: center;">
       <thead>
         <tr>
           <th *ngFor="let head of tableHead" [attr.colspan]="head.colspan">{{head.name}}</th>
+         
         </tr>
       </thead>
       <tbody *ngFor="let customer of customers">
@@ -83,11 +84,10 @@
           <td style="width:10%">{{customer.firstName}}</td>
           <td style="width:10%">{{customer.lastName}}</td>
           <td style="width:10%">{{customer.email}}</td>
-          <td style="width:20%">{{customer.userName}}</td>
-          <td style="width:20%">{{customer.password}}</td>
-          <td style="width:20%">{{customer.street}},{{customer.city}},{{customer.zipCode}}</td>
-          <td><img src={{customer.image}} style="height: 70px"></td>
-          <td style="width:30%">
+          <td style="width:10%">{{customer.userName}}</td>
+          <td style="width:30%">{{customer.street}},{{customer.city}},{{customer.zipCode}}</td>
+          <td style="width:10%"><img src={{customer.image}} style="height: 70px"></td>
+          <td style="width:10%">
             <button mat-raised-button color="warn" (click)="deleteCustomer(customer.id)">Delete</button>
           </td>
           <td>

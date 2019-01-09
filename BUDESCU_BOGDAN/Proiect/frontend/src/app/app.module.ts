@@ -13,7 +13,6 @@ import { SignInComponent } from './pages/sign-in/sign-in.component';
 import { SignUpComponent } from './pages/sign-up/sign-up.component';
 import { HttpService } from './services/http/http.service';
 import { SharedService } from './services/shared/shared.service';
-import { CryptoService } from './services/crypto/crypto.service';
 import { CustomerComponent } from './pages/customer/customer.component';
 import { ProductComponent } from './pages/product/product.component';
 import { BagComponent } from './pages/bag/bag.component';
@@ -41,7 +40,6 @@ import { MyAccountComponent } from './pages/my-account/my-account.component';
   providers: [
     HttpService,
     SharedService,
-    CryptoService
   ],
   bootstrap: [AppComponent]
 })

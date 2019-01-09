@@ -18,31 +18,10 @@ export class ProductComponent  {
     { name: "countryId", colspan: 2 }
   ];
 
-  public selectedProducts: any[]=[];
+  
   public indexProduct = 0;
   public array : any[]=[1,2,3,4,5,6,7,8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21];
   public indexPage = 1;
-  // public products : any[] = [
-  //                           {
-  //                             image : 'assets/laptop1.jpg',
-  //                             name : 'Laptop ASUS ZenBook UX430UA-GV183T',
-  //                             quantity:'500 pieces',
-  //                             cost: '2400 RON'
-  //                           },
-  //                           {
-  //                             image : 'assets/laptop2.jpg',
-  //                             name : 'Laptop ASUS ZenBook 13 UX331UN-C4088T',
-  //                             quantity:'10 pieces',
-  //                             cost : '3600 RON'
-  //                           },
-  //                           {
-  //                             image :'assets/laptop3.jpg',
-  //                             name : 'Notebook Asus K555lb - dm451t',
-  //                             quantity:'200 pieces',
-  //                             cost : '3200 RON'
-  //                           }
-  //                           ];
-  public products: Product[] = [];
   public showCreateProductForm: boolean = false;
   public createUserModel: Product = new Product("","",new Date(),"",true,null,null,"","","","");
   public updateUserModel: Product = new Product("","",new Date(),"",true,null,null,"","","","");
@@ -57,24 +36,24 @@ export class ProductComponent  {
    public AddProduct(index:number)
    {
      this.indexProduct ++;
-     this.selectedProducts.push(index);
+     this.sharedService.selectedProducts.push(index);
    }
 
    public DeleteProductCustomer(index:number)
    {
      this.indexProduct ++;
-     console.log(this.selectedProducts);
-     for (let i = 0; i < this.selectedProducts.length; i++) {
-       const element = this.selectedProducts[i];
+     console.log(this.sharedService.selectedProducts);
+     for (let i = 0; i < this.sharedService.selectedProducts.length; i++) {
+       const element = this.sharedService.selectedProducts[i];
        if(element==index)
        {
-         this.selectedProducts.splice(i,1);
+         this.sharedService.selectedProducts.splice(i,1);
        }
      }
    }
 
    public NextButton() {
-    if (this.indexPage < (this.products.length-1) / 6) {
+    if (this.indexPage < (this.sharedService.products.length-1) / 6) {
       this.indexPage++;
     }
   }
@@ -88,7 +67,7 @@ export class ProductComponent  {
 
   public getProducts() {
     this.httpService.getProducts().subscribe((result: Product[]) => {
-      this.products = result;
+      this.sharedService.products = result;
     });
   }
 

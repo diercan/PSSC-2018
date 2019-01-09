@@ -9,23 +9,24 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarResponsive" style="display: none;">
       <ul class="navbar-nav ml-auto">
-        <li *ngIf="sharedService.role == 'Manager'" class="nav-item">
-          <a class="nav-link" [routerLink]="['/customer']" (click)="closeExpandedMenu()">Customer</a>
+        <li *ngIf="sharedService.role == 'Manager' && sharedService.isLoggedIn == true" class="nav-item">
+          <a class="nav-link" style="display:flex;color:white" [routerLink]="['/customer']" (click)="closeExpandedMenu()"><i class="material-icons"> group</i>Customer</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/products']" (click)="closeExpandedMenu()">Products</a>
+          <a class="nav-link"style="display:flex;color:white" [routerLink]="['/products']" (click)="closeExpandedMenu()"><i class="material-icons">local_mall </i>Products</a>
         </li>
         <li class="nav-item"  *ngIf="sharedService.isLoggedIn == true">
-            <a class="nav-link" style="display:flex" [routerLink]="['/bag']" (click)="closeExpandedMenu()">Shopping bag <i class="material-icons"> add_shopping_cart</i></a>
+            <a class="nav-link" style="display:flex;color:white" [routerLink]="['/bag']" (click)="closeExpandedMenu()"> <i class="material-icons"> add_shopping_cart</i>Shopping bag
+              <p *ngIf="sharedService.selectedProducts.length > 0" style="margin-top: -10px;font-weight: 700;">{{sharedService.selectedProducts.length}}</p></a>
         </li>
         <li class="nav-item"  *ngIf="sharedService.isLoggedIn == true">
-            <a class="nav-link" style="display:flex" [routerLink]="['/my-account']" (click)="closeExpandedMenu()">My account <i class="material-icons"> add_shopping_cart</i></a>
+            <a class="nav-link" style="display:flex;color:white" [routerLink]="['/my-account']" (click)="closeExpandedMenu()"> <i class="material-icons"> account_circle</i>My account</a>
         </li>
         <li  *ngIf="sharedService.isLoggedIn == false" class="nav-item">
-          <a class="nav-link" [routerLink]="['/sign-in']" (click)="closeExpandedMenu()">Sign in</a>
+          <a class="nav-link" style="display:flex;color:white" [routerLink]="['/sign-in']" (click)="closeExpandedMenu()">Sign in</a>
         </li>
         <li  *ngIf="sharedService.isLoggedIn == true" class="nav-item">
-          <a class="nav-link" (click)="logOut()">Log out</a>
+          <a class="nav-link" style="display:flex;color:white" (click)="logOut()">Log out<i class="fa fa-sign-out" aria-hidden="true"></i></a>
         </li>
         
       </ul>
