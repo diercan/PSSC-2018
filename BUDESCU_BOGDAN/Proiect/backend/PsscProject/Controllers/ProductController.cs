@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json.Linq;
+using PsscProject.ApplicationLayer.Carts;
 using PsscProject.ApplicationLayer.Products;
 
 namespace PsscProject.Controllers
@@ -15,13 +16,15 @@ namespace PsscProject.Controllers
     public class ProductController : Controller
     {
         private IProductService _productService;
-        public ProductController(IProductService productService)
+        private ICartService _cartService;
+        public ProductController(IProductService productService, ICartService cartService)
         {
             _productService = productService;
+            _cartService = cartService;
         }
 
         // GET: api/Product
-        [HttpGet, Authorize]
+        [HttpGet]
         public IEnumerable<ProductDTO> GetProducts()
         {
             return this._productService.GetAll();
@@ -44,23 +47,40 @@ namespace PsscProject.Controllers
                 Created = DateTime.Today,
                 Modified = DateTime.Today,
                 Active = (Boolean)value["active"],
-                Quantity = (Int16)value["quantity"],
-                Cost = (Int16)value["cost"]
+                Quantity = (Int32)value["quantity"],
+                Cost = (Int32)value["cost"],
+                Description = (String)value["description"],
+                Image = (String)value["image"]
             };
             return this._productService.Add(productDTO);
         }
-        
+
+        [HttpPost("cart/{id}")]
+        public CartDTO AddProductToCart(Guid id, [FromBody]JObject value)
+        {
+            Console.WriteLine(id);
+            CartProductDTO productDTO = new CartProductDTO()
+            {
+                ProductId = (Guid)value["id"]
+            };
+
+            return this._cartService.Add(id, productDTO);
+        }
+
         // PUT: api/Product/5
         [HttpPut("{id}"), Authorize]
         public void UpdateProduct(Guid id, [FromBody]JObject value)
         {
             ProductDTO productDTO = new ProductDTO()
             {
+                Id = id,
                 Name = (String)value["name"],
                 Modified = DateTime.Today,
                 Active = (Boolean)value["active"],
                 Quantity = (Int16)value["quantity"],
-                Cost = (Int16)value["cost"]
+                Cost = (Int16)value["cost"],
+                Description = (String)value["description"],
+                Image = (String)value["image"]
             };
             this._productService.Update(productDTO);
         }

@@ -22,6 +22,8 @@ namespace PsscProject.Models.Products
         public Quantity Quantity { get; set; }
         public Cost Cost { get; set; }
         public ProductCode Code { get; set; }
+        public PlainText Description { get; set; }
+        public string Image { get; set; }
         public ReadOnlyCollection<Return> Returns
         {
             get
@@ -30,21 +32,23 @@ namespace PsscProject.Models.Products
             }
         }
 
-        public static Product Create(PlainText name, PlainText details, Quantity quantity, Cost cost, ProductCode productCode)
+        public static Product Create(PlainText name,  Quantity quantity, Cost cost, ProductCode productCode, PlainText description, string image)
         {
             Product product = new Product()
             {
                 Id = Guid.NewGuid(),
                 Name = name,
-                Details = details,
                 Quantity = quantity,
                 Created = DateTime.Now,
                 Modified = DateTime.Now,
                 Active = true,
                 Cost = cost,
-                Code = productCode
+                Code = productCode,
+                Description = description,
+                Image = image
             };
 
+            DomainEvents.Raise<ProductCreated>(new ProductCreated(product));
             return product;
         }
     }

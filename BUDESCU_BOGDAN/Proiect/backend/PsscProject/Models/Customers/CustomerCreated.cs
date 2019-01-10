@@ -12,10 +12,10 @@ namespace PsscProject.Models.Customers
 
         public CustomerCreated(Customer customer )
         {
-            this.Args.Add("FirstName", customer.FirstName);
-            this.Args.Add("LastName", customer.LastName);
-            this.Args.Add("Email", customer.Email);
-            this.Args.Add("Country", customer.CountryId);
+            this.Args.Add("FirstName", customer.FirstName.Text.ToString());
+            this.Args.Add("LastName", customer.LastName.Text.ToString());
+            this.Args.Add("Email", customer.Email.Value.ToString());
+            this.Args.Add("Country", customer.CountryId.ToString());
         }
     }
 }

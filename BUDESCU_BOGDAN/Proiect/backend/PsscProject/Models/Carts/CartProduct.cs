@@ -14,13 +14,14 @@ namespace PsscProject.Models.Carts
         public Guid Id { get; set; }
         public Guid CartId { get; set; }
         public Guid CustomerId { get; set; }
-        public Quantity Quantity { get; set; }
         public Guid ProductId { get; set; }
+
+        public Quantity Quantity { get; set; }
         public DateTime Created { get; set; }
         public Cost Cost { get; set; }
         public decimal Tax { get; set; }
 
-        public static CartProduct Create(Customer customer, Cart cart, Product product, Quantity quantity/*, TaxService taxService*/)
+        public static CartProduct Create(Customer customer, Cart cart, Product product, Quantity quantity /*, TaxService taxService*/)
         {
             CartProduct cartProduct = new CartProduct()
             {
@@ -31,7 +32,6 @@ namespace PsscProject.Models.Carts
                 Quantity = quantity,
                 Created = DateTime.Now,
                 Cost = product.Cost,
-                //Tax = taxService.Calculate(customer, product)
             };
 
             return cartProduct;

@@ -18,7 +18,7 @@ namespace PsscProject.Repository
                 {
                     Created = domainEvent.Created,
                     Type = domainEvent.Type,
-                    Args = domainEvent.Args.Select(kv => new KeyValuePair<string, string>(kv.Key, kv.Value.ToString())).ToList(),
+                    //Args = domainEvent.Args.Select(kv => new KeyValuePair<string, string>(kv.Key, kv.Value.ToString())).ToList(),
                     Id = Guid.NewGuid()
                 });
             foreach (var e in domainEvents)

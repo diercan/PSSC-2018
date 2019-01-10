@@ -18,10 +18,10 @@ namespace PsscProject.Models.Purchases
         {
             get { return purchasedProducts.AsReadOnly(); }
         }
-        public DateTime Created { get; protected set; }
-        public Guid CustomerId { get; protected set; }
-        public decimal TotalTax { get; protected set; }
-        public Cost TotalCost { get; protected set; }
+        public DateTime Created { get; set; }
+        public Guid CustomerId { get; set; }
+        public Guid CartId { get; set; }
+        public Cost TotalCost { get; set; }
 
         public static Purchase Create(Cart cart)
         {
@@ -31,14 +31,13 @@ namespace PsscProject.Models.Purchases
                 Created = DateTime.Today,
                 CustomerId = cart.CustomerId,
                 TotalCost = cart.TotalCost,
-                TotalTax = cart.TotalTax
             };
 
             List<PurchasedProduct> purchasedProducts = new List<PurchasedProduct>();
-            foreach (CartProduct cartProduct in cart.Products)
-            {
-                purchasedProducts.Add(PurchasedProduct.Create(purchase, cartProduct));
-            }
+            //foreach (CartProduct cartProduct in cart.Products)
+            //{
+            //    purchasedProducts.Add(PurchasedProduct.Create(purchase, cartProduct));
+            //}
 
             purchase.purchasedProducts = purchasedProducts;
 

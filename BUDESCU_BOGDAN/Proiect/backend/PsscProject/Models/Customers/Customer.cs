@@ -34,13 +34,12 @@ namespace PsscProject.Models.Customers
             };
 
             DomainEvents.Raise<CustomerCreated>(new CustomerCreated(customer));
-
             return customer;
         }
 
         public ReadOnlyCollection<CreditCard> GetCreditCardsAvailble()
         {
-            return this.creditCards.FindAll(creditCard => creditCard.Active && creditCard.Expiry >= DateTime.Today).AsReadOnly();
+            return this.creditCards.FindAll(creditCard => creditCard.Expiry >= DateTime.Today).AsReadOnly();
         }
 
         public void AddCreditCard(CreditCard creditCard)

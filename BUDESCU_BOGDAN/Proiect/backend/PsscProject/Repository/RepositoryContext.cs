@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using PsscProject.ApplicationLayer.Carts;
 using PsscProject.ApplicationLayer.Customers;
 using PsscProject.ApplicationLayer.Products;
 using PsscProject.Models;
@@ -14,13 +15,20 @@ namespace PsscProject.Repository
 {
     public class RepositoryContext : DbContext
     {
-        public RepositoryContext(DbContextOptions options)
-            : base(options)
-        {
-        }
-
         public DbSet<User> Users { get; set; }
         public DbSet<CustomerDTO> Customers { get; set; }
         public DbSet<ProductDTO> Products { get; set; }
+        public DbSet<CreditCardDTO> CreditCards { get; set; }
+        public DbSet<CartDTO> Carts { get; set; }
+
+        public RepositoryContext(DbContextOptions options)
+          : base(options)
+        {
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+
+        }
     }
 }

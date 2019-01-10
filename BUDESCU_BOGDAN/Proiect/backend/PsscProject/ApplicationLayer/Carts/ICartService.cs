@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace PsscProject.ApplicationLayer.Carts
 {
-    interface ICartService
+    public interface ICartService
     {
-        CartDTO Add(Guid customerId, ProductDTO cartProductDto);
+        CartDTO Add(Guid customerId, CartProductDTO cartProductDto);
         CartDTO Remove(Guid customerId, Guid productId);
         CartDTO Get(Guid customerId);
         CheckOutResultDTO CheckOut(Guid customerId);

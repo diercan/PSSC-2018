@@ -10,18 +10,28 @@ using AutoMapper;
 using PsscProject.Repository;
 using Newtonsoft.Json;
 using PsscProject.Models.Generic;
+using System.Collections.ObjectModel;
+using PsscProject.ApplicationLayer.Users;
+using PsscProject.Models.Users;
+using PsscProject.Helpers.Domain;
 
 namespace PsscProject.ApplicationLayer.Customers
 {
     public class CustomerService : ICustomerService
     {
         private ICustomerRepository customerRepository;
+        private IUserRepository userRepository;
+        private IUserService userService;
+        private ICreditCardRepository creditCardRepository;
         private readonly IMapper _mapper;
      
-        public CustomerService(ICustomerRepository customerRepository, IMapper mapper)
+        public CustomerService(ICustomerRepository customerRepository, ICreditCardRepository creditCardRepository,IUserRepository userRepository, IMapper mapper, IUserService userService)
         {
             _mapper = mapper;
             this.customerRepository = customerRepository;
+            this.creditCardRepository = creditCardRepository;
+            this.userRepository = userRepository;
+            this.userService = userService;
         }
 
         public bool IsEmailAvailable(string email)
@@ -41,12 +51,12 @@ namespace PsscProject.ApplicationLayer.Customers
             Country country = Country.Create(new PlainText("Romania"));
             Customer customer = Customer.Create(new PlainText(customerDto.FirstName), new PlainText(customerDto.LastName), new Email(customerDto.Email), country);
 
-            this.customerRepository.Create(_mapper.Map<Customer, CustomerDTO>(customer));
+            this.customerRepository.Create(customerDto);
             this.customerRepository.Save();
             return customer;
         }
 
-        public void Update(CustomerDTO customerDto)
+        public Guid Update(CustomerDTO customerDto)
         {
             if (customerDto.Id == Guid.Empty)
             {
@@ -61,8 +71,13 @@ namespace PsscProject.ApplicationLayer.Customers
             customer.Email = customerDto.Email;
             customer.FirstName = customerDto.FirstName;
             customer.LastName = customerDto.LastName;
+            customer.ZipCode = customerDto.ZipCode;
+            customer.Street = customerDto.Street;
+            customer.City = customerDto.City;
             this.customerRepository.Update(customer);
             this.customerRepository.Save();
+            DomainEvents.Raise<CustomerUpdated>(new CustomerUpdated(customer));
+            return customer.UserId;
         }
 
         public void Remove(Guid customerId)
@@ -73,7 +88,7 @@ namespace PsscProject.ApplicationLayer.Customers
             {
                 throw new Exception("No such customer exists");
             }
-
+            DomainEvents.Raise<CustomerDeleted>(new CustomerDeleted(customer));
             this.customerRepository.Delete(customer);
             this.customerRepository.Save();
         }
@@ -81,42 +96,55 @@ namespace PsscProject.ApplicationLayer.Customers
         public CustomerDTO Get(Guid customerId)
         {
             CustomerDTO customer = customerRepository.FindOne(c => c.Id == customerId);
+            customer.CreditCards = GetCreditCardsById(customerId).ToList();
             return customer;
+        }
+
+        public IEnumerable<CreditCardDTO> GetCreditCardsById(Guid customerId)
+        {
+            IEnumerable<CreditCardDTO> creditsCard = creditCardRepository.FindByCondition(c => c.CustomerDTOId == customerId);
+            return creditsCard;
         }
 
         public IEnumerable<CustomerDTO> GetAll()
         {
             IEnumerable<CustomerDTO> customers = this.customerRepository.FindAll();
+            try
+            {
+                foreach (var c in customers)
+                {
+                    var user = userRepository.FindOne(r => r.Id == c.UserId);
+                    c.User = new UserDTO()
+                    {
+                        Username = user.UserName,
+                        Role = user.Role
+                    };
+                }
+            } catch(Exception ex) { }
             return customers;
         }
 
-        public CreditCardDTO Add(Guid customerId, CreditCardDTO creditCardDto)
+        public CustomerDTO GetCustomerByUserId(Guid UserId)
         {
-            //ISpecification<Customer> registeredSpec =
-            //    new CustomerRegisteredSpec(customerId);
+            CustomerDTO customer = customerRepository.FindOne(c => c.UserId == UserId);
+            Console.WriteLine(UserId);
+            var user = userRepository.FindOne(r => r.Id == customer.UserId);
+            customer.User = new UserDTO()
+            {
+                Username = user.UserName,
+                Role = user.Role
+            };
+            return customer;
+        }
 
-            //Customer customer = this.customerRepository.FindOne(registeredSpec);
-
-            //if (customer == null)
-            //    throw new Exception("No such customer exists");
-
-            //CreditCard creditCard =
-            //    CreditCard.Create(customer, creditCardDto.NameOnCard,
-            //    creditCardDto.CardNumber, creditCardDto.Expiry);
-
-            //customer.Add(creditCard);
-
-            //return AutoMapper.Mapper.Map<CreditCard, CreditCardDTO>(creditCard);
-            return null;
+        public CreditCardDTO Add(Guid customerId, CreditCardDTO creditCard)
+        {
+            throw new NotImplementedException();
         }
 
         public List<CustomerPurchaseHistoryDTO> GetAllCustomerPurchaseHistory()
         {
-            //IEnumerable<CustomerPurchaseHistoryReadModel> customersPurchaseHistory =
-            //    this.customerRepository.GetCustomersPurchaseHistory();
-
-            //return AutoMapper.Mapper.Map<IEnumerable<CustomerPurchaseHistoryReadModel>, List<CustomerPurchaseHistoryDto>>(customersPurchaseHistory);
-            return null;
+            throw new NotImplementedException();
         }
     }
 }

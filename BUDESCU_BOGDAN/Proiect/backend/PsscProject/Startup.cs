@@ -15,6 +15,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
+using Newtonsoft.Json;
 using PsscProject.ApplicationLayer.Customers;
 using PsscProject.Helpers.Domain;
 using PsscProject.Models.Customers;
@@ -34,11 +35,12 @@ namespace PsscProject
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            DomainEvents.domainEvents = JsonConvert.DeserializeObject<List<DomainEventRecord>>(System.IO.File.ReadAllText(DomainEvents.path));
+
             services.ConfigureCors();
             services.ConfigureIISIntegration();
             services.ConfigureMySqlContext(Configuration);
-            services.ConfigureAppServices();
-            services.AddAutoMapper();
+           
             var mappingConfig = new MapperConfiguration(mc =>
             {
                 mc.AddProfile(new Map());
@@ -53,19 +55,21 @@ namespace PsscProject
                       ValidateAudience = true,
                       ValidateLifetime = true,
                       ValidateIssuerSigningKey = true,
-
                       ValidIssuer = "http://0.0.0.0:5000",
                       ValidAudience = "http://0.0.0.0:5000",
                       IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("superSecretKey@345"))
                   };
               });
-
+            services.ConfigureAppServices();
+            services.AddAutoMapper();
             services.AddMvc();
 
         }
 
         public void Configure(IApplicationBuilder app, IHostingEnvironment env)
         {
+            app.UseAuthentication();
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -91,7 +95,6 @@ namespace PsscProject
             });
 
             app.UseStaticFiles();
-            app.UseAuthentication();
             app.UseMvc() ;
         }
     }

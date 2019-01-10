@@ -10,11 +10,13 @@ namespace PsscProject.ApplicationLayer.Customers
     {
         bool IsEmailAvailable(string email);
         Customer Add(CustomerDTO customerDto);
-        void Update(CustomerDTO customerDto);
+        Guid Update(CustomerDTO customerDto);
         void Remove(Guid customerId);
         CustomerDTO Get(Guid customerId);
         IEnumerable<CustomerDTO> GetAll();
         CreditCardDTO Add(Guid customerId, CreditCardDTO creditCard);
         List<CustomerPurchaseHistoryDTO> GetAllCustomerPurchaseHistory();
+        IEnumerable<CreditCardDTO> GetCreditCardsById(Guid customerId);
+        CustomerDTO GetCustomerByUserId(Guid UserId);
     }
 }

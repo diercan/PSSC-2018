@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using PsscProject.Helpers.Domain;
+using PsscProject.Models.Generic;
 using PsscProject.Models.Products;
 using PsscProject.Repository;
 using PsscProject.Repository.Interfaces;
@@ -25,6 +27,15 @@ namespace PsscProject.ApplicationLayer.Products
         {
             this.productRepository.Create(productDto);
             this.productRepository.Save();
+            DomainEvents.Raise<ProductCreated>(new ProductCreated(new Product()
+            {
+                Active = productDto.Active,
+                Cost = new Cost(productDto.Cost),
+                Name = new PlainText(productDto.Name),
+                Quantity = new Quantity(productDto.Quantity),
+                Description = new PlainText(productDto.Description),
+                Id = productDto.Id
+            }));
             return productDto;
         }
 
@@ -56,21 +67,41 @@ namespace PsscProject.ApplicationLayer.Products
             product.Cost = productDto.Cost;
             product.Name = productDto.Name;
             product.Quantity = productDto.Quantity;
+            product.Description = productDto.Description;
             this.productRepository.Update(product);
             this.productRepository.Save();
+            DomainEvents.Raise<ProductUpdated>(new ProductUpdated(new Product() {
+                Active = productDto.Active,
+                Cost = new Cost(productDto.Cost),
+                Name = new PlainText(productDto.Name),
+                Quantity = new Quantity(productDto.Quantity),
+                Description = new PlainText(productDto.Description),
+                Id = productDto.Id
+            }));
+
         }
 
         public void Remove(Guid productId)
         {
-            ProductDTO product = this.productRepository.FindOne(c => c.Id == productId);
+            ProductDTO productDto = this.productRepository.FindOne(c => c.Id == productId);
 
-            if (product == null)
+            if (productDto == null)
             {
                 throw new Exception("No such product exists");
             }
 
-            this.productRepository.Delete(product);
+            this.productRepository.Delete(productDto);
             this.productRepository.Save();
+            DomainEvents.Raise<ProductDeleted>(new ProductDeleted(new Product()
+            {
+                Active = productDto.Active,
+                Cost = new Cost(productDto.Cost),
+                Name = new PlainText(productDto.Name),
+                Quantity = new Quantity(productDto.Quantity),
+                Description = new PlainText(productDto.Description),
+                Id = productDto.Id
+            }));
+
         }
     }
 }

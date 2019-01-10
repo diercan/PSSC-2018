@@ -10,6 +10,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
+using PsscProject.ApplicationLayer.Customers;
 using PsscProject.ApplicationLayer.Users;
 using PsscProject.Models.Users;
 
@@ -20,11 +21,13 @@ namespace PsscProject.Controllers
     public class AuthController : Controller
     {
         private IUserService _userService;
+        private ICustomerService customerService;
         private IMapper _mapper;
-        public AuthController(IUserService userService, IMapper mapper)
+        public AuthController(IUserService userService, ICustomerService customerService, IMapper mapper)
         {
             _mapper = mapper;
             _userService = userService;
+            this.customerService = customerService;
         }
 
         [HttpPost, Route("login")]
@@ -41,8 +44,9 @@ namespace PsscProject.Controllers
             var signinCredentials = new SigningCredentials(secretKey, SecurityAlgorithms.HmacSha256);
             var claims = new List<Claim>
             {
-                new Claim(ClaimTypes.Name, user.UserName.Text),
-                new Claim(ClaimTypes.Role, "Manager")
+                new Claim(ClaimTypes.Name, user.UserName),
+                new Claim(ClaimTypes.Role, user.Role),
+                new Claim(ClaimTypes.NameIdentifier, user.Id.ToString()) 
             };
             var tokeOptions = new JwtSecurityToken(
                 issuer: "http://0.0.0.0:5000",
@@ -53,7 +57,7 @@ namespace PsscProject.Controllers
             );
 
             var tokenString = new JwtSecurityTokenHandler().WriteToken(tokeOptions);
-            return Ok(new { Role = "Manager", Token = tokenString });
+            return Ok(new { Role = "Manager", Token = tokenString, message = "Successfull Login." });
         }
 
         [AllowAnonymous]
@@ -65,8 +69,18 @@ namespace PsscProject.Controllers
 
             try
             {
-                _userService.Create(user, userDto.Password);
-                return Ok();
+                var _user = _userService.Create(user, userDto.Password);
+                CustomerDTO customerDto = new CustomerDTO()
+                {
+                    Id = Guid.NewGuid(),
+                    UserId = _user.Id,
+                    FirstName = "-",
+                    LastName = "-",
+                    Email = "-@-",
+
+                };
+                customerService.Add(customerDto);
+                return Ok(new { message = "Successful Register."});
             }
             catch (Exception ex)
             {

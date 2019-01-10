@@ -1,0 +1,187 @@
+[
+  {
+    "Id": "d4f16790-8345-4c49-8bb4-ef39d8e5104c",
+    "Type": "UserLogged",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "Bia672"
+      },
+      {
+        "Key": "Role",
+        "Value": "Manager"
+      }
+    ],
+    "Created": "2019-01-10T01:37:15.880415+02:00"
+  },
+  {
+    "Id": "cc03101f-b096-447a-8bc1-adf1c314fe84",
+    "Type": "UserRegistred",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "orbit"
+      },
+      {
+        "Key": "Role",
+        "Value": "Customer"
+      }
+    ],
+    "Created": "2019-01-10T02:33:55.4048478+02:00"
+  },
+  {
+    "Id": "925109b0-48a8-4e06-a6e6-6228d44b7867",
+    "Type": "CustomerCreated",
+    "Args": [
+      {
+        "Key": "FirstName",
+        "Value": "PsscProject.Models.Generic.PlainText"
+      },
+      {
+        "Key": "LastName",
+        "Value": "PsscProject.Models.Generic.PlainText"
+      },
+      {
+        "Key": "Email",
+        "Value": "PsscProject.Models.Customers.Email"
+      },
+      {
+        "Key": "Country",
+        "Value": "1aa7c39a-f012-4c04-b1a4-78f27095589a"
+      }
+    ],
+    "Created": "2019-01-10T02:33:55.4806652+02:00"
+  },
+  {
+    "Id": "79150c3f-232d-46a3-9f77-ebcccdf7c8fd",
+    "Type": "UserLogged",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "orbit"
+      },
+      {
+        "Key": "Role",
+        "Value": "Customer"
+      }
+    ],
+    "Created": "2019-01-10T02:34:14.4142211+02:00"
+  },
+  {
+    "Id": "d8cef9cf-0fb7-405f-ac57-f67831d005fe",
+    "Type": "CustomerUpdated",
+    "Args": [
+      {
+        "Key": "FirstName",
+        "Value": "Bogdan"
+      },
+      {
+        "Key": "LastName",
+        "Value": "Budescu"
+      },
+      {
+        "Key": "Email",
+        "Value": "bogdanbudescu96@gmail.com"
+      }
+    ],
+    "Created": "2019-01-10T02:34:43.4412428+02:00"
+  },
+  {
+    "Id": "3c56555e-7493-498f-be0e-d63dc0409471",
+    "Type": "UserUpdated",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "orbit"
+      },
+      {
+        "Key": "Role",
+        "Value": "Customer"
+      }
+    ],
+    "Created": "2019-01-10T02:34:43.4923662+02:00"
+  },
+  {
+    "Id": "ca599e07-60f6-484f-8130-88c075081a82",
+    "Type": "UserLogged",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "Bia672"
+      },
+      {
+        "Key": "Role",
+        "Value": "Manager"
+      }
+    ],
+    "Created": "2019-01-10T02:35:30.2065919+02:00"
+  },
+  {
+    "Id": "057d7fa4-f5aa-4463-98cd-d6d60704490d",
+    "Type": "UserLogged",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "Bia672"
+      },
+      {
+        "Key": "Role",
+        "Value": "Manager"
+      }
+    ],
+    "Created": "2019-01-10T02:35:58.3554087+02:00"
+  },
+  {
+    "Id": "c20432fd-868b-4906-93df-f4777cf8148e",
+    "Type": "CustomerUpdated",
+    "Args": [
+      {
+        "Key": "FirstName",
+        "Value": "Bogdan"
+      },
+      {
+        "Key": "LastName",
+        "Value": "Budescu"
+      },
+      {
+        "Key": "Email",
+        "Value": "bogdanbudescu96@gmail.com"
+      }
+    ],
+    "Created": "2019-01-10T02:37:02.238493+02:00"
+  },
+  {
+    "Id": "258540d1-d6e6-4ac1-992c-7e174d533b09",
+    "Type": "UserUpdated",
+    "Args": [
+      {
+        "Key": "Username",
+        "Value": "bogdan"
+      },
+      {
+        "Key": "Role",
+        "Value": "Customer"
+      }
+    ],
+    "Created": "2019-01-10T02:37:02.3088846+02:00"
+  },
+  {
+    "Id": "e34e5c7e-68fa-467f-abe0-41e39dbe8028",
+    "Type": "CustomerDeleted",
+    "Args": [
+      {
+        "Key": "FirstName",
+        "Value": "tesst"
+      },
+      {
+        "Key": "LastName",
+        "Value": "tesst"
+      },
+      {
+        "Key": "Email",
+        "Value": "tesst@tesasa"
+      }
+    ],
+    "Created": "2019-01-10T02:37:08.7283331+02:00"
+  }
+]

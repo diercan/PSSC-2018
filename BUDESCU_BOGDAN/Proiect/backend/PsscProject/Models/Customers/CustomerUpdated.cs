@@ -1,3 +1,4 @@
+using PsscProject.ApplicationLayer.Customers;
 using PsscProject.Helpers.Domain;
 using System;
 using System.Collections.Generic;
@@ -8,14 +9,13 @@ namespace PsscProject.Models.Customers
 {
     public class CustomerUpdated : DomainEvent
     {
-        public Customer Customer { get; set; }
+        public CustomerDTO Customer { get; set; }
 
-        public CustomerUpdated(Customer customer )
+        public CustomerUpdated(CustomerDTO customer )
         {
             this.Args.Add("FirstName", customer.FirstName);
             this.Args.Add("LastName", customer.LastName);
             this.Args.Add("Email", customer.Email);
-            this.Args.Add("Country", customer.CountryId);
         }
     }
 }

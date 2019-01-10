@@ -10,12 +10,12 @@ namespace PsscProject.Models.Users
     public class User: IAggregateRoot
     {
         public Guid Id { get; set; }
-        public PlainText UserName { get; set; }
+        public string UserName { get; set; }
         public byte[] PasswordHash { get; set; }
         public byte[] PasswordSalt { get; set; }
-        public Role Role { get; set; }
+        public string Role { get; set; }
 
-        public static User Create(PlainText userName, byte[] passwordHash, byte[] passwordSalt, Role role)
+        public static User Create(string userName, byte[] passwordHash, byte[] passwordSalt, string role)
         {
             return new User()
             {

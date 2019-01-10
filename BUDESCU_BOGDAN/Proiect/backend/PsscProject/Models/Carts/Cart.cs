@@ -1,4 +1,5 @@
-﻿using PsscProject.Helpers.Domain;
+﻿using PsscProject.ApplicationLayer.Carts;
+using PsscProject.Helpers.Domain;
 using PsscProject.Models.Customers;
 using PsscProject.Models.Generic;
 using PsscProject.Models.Products;
@@ -12,28 +13,15 @@ namespace PsscProject.Models.Carts
 {
     public class Cart : IAggregateRoot
     {
-        public Guid Id { get; protected set; }
-        private List<CartProduct> cartProducts = new List<CartProduct>();
-        public ReadOnlyCollection<CartProduct> Products
+        public Guid Id { get; set; }
+        public Guid CustomerId { get; set; }
+        public Cost TotalCost { get; set; }
+        private List<CartProductDTO> cartProducts = new List<CartProductDTO>();
+        public ReadOnlyCollection<CartProductDTO> Products
         {
             get { return cartProducts.AsReadOnly(); }
         }
-        public Guid CustomerId { get; protected set; }
-        public Cost TotalCost
-        {
-            get
-            {
-                return new Cost(this.Products.Sum(cartProduct => cartProduct.Quantity.Value * cartProduct.Cost.Value));
-            }
-        }
-        public decimal TotalTax
-        {
-            get
-            {
-                return this.Products.Sum(cartProducts => cartProducts.Tax);
-            }
-        }
-
+      
         public static Cart Create(Customer customer)
         {
             if (customer == null)
@@ -42,18 +30,18 @@ namespace PsscProject.Models.Carts
             Cart cart = new Cart();
             cart.Id = Guid.NewGuid();
             cart.CustomerId = customer.Id;
-
+            
             //DomainEvents.Raise<CartCreated>(new CartCreated() { Cart = cart });
 
             return cart;
         }
 
-        public void Add(CartProduct cartProduct)
+        public void Add(CartProductDTO cartProduct)
         {
             if (cartProduct == null)
                 throw new ArgumentNullException();
 
-            //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProduct = cartProduct });
+            //DomainEvents.Raise<ProductAddedCart>(new ProductAddedCart() { CartProductDTO = cartProduct });
 
             this.cartProducts.Add(cartProduct);
         }
@@ -63,12 +51,11 @@ namespace PsscProject.Models.Carts
             if (product == null)
                 throw new ArgumentNullException("product");
 
-            CartProduct cartProduct = null;
-                //= this.cartProducts.Find(new ProductInCartSpec(product).IsSatisfiedBy);
+            //CartProductDTO cartProduct = this.cartProducts.FindO();
 
-            //DomainEvents.Raise<ProductRemovedCart>(new ProductRemovedCart() { CartProduct = cartProduct });
+            //DomainEvents.Raise<ProductRemovedCart>(new ProductRemovedCart() { CartProductDTO = cartProduct });
 
-            this.cartProducts.Remove(cartProduct);
+            //this.cartProducts.Remove(cartProduct);
         }
 
         public void Clear()

@@ -1,4 +1,6 @@
 ﻿using AutoMapper;
+using Newtonsoft.Json;
+using PsscProject.Helpers.Domain;
 using PsscProject.Models.Users;
 using PsscProject.Repository;
 using PsscProject.Repository.Interfaces;
@@ -11,14 +13,12 @@ namespace PsscProject.ApplicationLayer.Users
 {
     class UserService : IUserService
     {
-        private RepositoryContext _repoContext;
         private IUserRepository userRepository;
         private readonly IMapper _mapper;
-        public UserService(RepositoryContext repositoryContext, IMapper mapper)
+        public UserService(IUserRepository userRepository, IMapper mapper)
         {
             _mapper = mapper;
-            _repoContext = repositoryContext;
-            userRepository = new UserRepository(_repoContext);
+            this.userRepository = userRepository;
         }
 
         public User Authenticate(string username, string password)
@@ -26,13 +26,14 @@ namespace PsscProject.ApplicationLayer.Users
             if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 return null;
 
-            var user = this.userRepository.FindOne(x => x.UserName.Text == username);
+            var user = this.userRepository.FindOne(x => x.UserName ==  username);
 
             if (user == null)
                 return null;
 
             if (!VerifyPasswordHash(password, user.PasswordHash, user.PasswordSalt))
                 return null;
+            DomainEvents.Raise<UserLogged>(new UserLogged(_mapper.Map<UserDTO>(user)));
 
             return user;
         }
@@ -53,22 +54,24 @@ namespace PsscProject.ApplicationLayer.Users
 
             this.userRepository.Create(user);
             this.userRepository.Save();
+            DomainEvents.Raise<UserRegistred>(new UserRegistred(_mapper.Map<UserDTO>(user)));
 
             return user;
         }
 
         public void Update(User userParam, string password = null)
         {
+            Console.WriteLine(JsonConvert.SerializeObject(userParam));
             var user = this.userRepository.FindOne(x => x.Id == userParam.Id);
 
             if (user == null)
                 throw new Exception("User not found");
 
-            if (userParam.UserName != user.UserName)
-            {
-                if (this.userRepository.FindOne(x => x.UserName == user.UserName) != null)
-                    throw new Exception("UserName " + userParam.UserName + " is already taken");
-            }
+            //if (userParam.UserName != user.UserName)
+            //{
+            //    if (this.userRepository.FindOne(x => x.UserName == user.UserName) != null)
+            //        throw new Exception("UserName " + userParam.UserName + " is already taken");
+            //}
 
             user.UserName = userParam.UserName;
 
@@ -83,6 +86,8 @@ namespace PsscProject.ApplicationLayer.Users
 
             this.userRepository.Update(user);
             this.userRepository.Save();
+            DomainEvents.Raise<UserUpdated>(new UserUpdated(_mapper.Map<UserDTO>(user)));
+
         }
 
         private static void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)

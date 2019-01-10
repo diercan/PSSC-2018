@@ -17,6 +17,8 @@ namespace PsscProject.ApplicationLayer.Products
         public int Quantity { get; set; }
         public int Cost { get; set; }
         public Guid ProductCodeId { get; set; }
+        public string Description { get; set; }
+        public string Image { get; set; }
         //public string ProductCodeName { get; set; }
     }
 }
