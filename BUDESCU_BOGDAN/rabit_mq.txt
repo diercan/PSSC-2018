@@ -1,0 +1,2 @@
+https://customer.cloudamqp.com/instance
+https://www.rabbitmq.com/tutorials/tutorial-one-dotnet.html

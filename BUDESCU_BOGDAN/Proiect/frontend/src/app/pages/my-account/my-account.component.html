@@ -1,0 +1,133 @@
+<div class="container demo-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-4">
+                                <div class="image-container">
+                                    <img src="assets/avatar.png" id="imgProfile" style="width: 300px; height: auto"
+                                        class="img-thumbnail" />
+                                </div>
+                            </div>
+                            <div class=" col-8">
+                                <div class="tab-content ml-1" id="myTabContent">
+                                    <div class="tab-pane fade show active" id="basicInfo" role="tabpanel"
+                                        aria-labelledby="basicInfo-tab">
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">First name</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{customer?.firstName}}
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Last name</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{customer?.lastName}}
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Email</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                {{customer?.email}}
+                                            </div>
+                                        </div>
+                                        <hr />
+
+                                        <div class="row">
+                                            <div class="col-sm-3 col-md-2 col-5">
+                                                <label style="font-weight:bold;">Adress</label>
+                                            </div>
+                                            <div class="col-md-8 col-6">
+                                                Street {{customer?.street || '-'}},City {{customer?.city || '-'}},
+                                                Zipcode {{customer?.zipCode || '-'}}
+                                            </div>
+                                        </div>
+                                        <hr />
+                                        <div class="mb-3">
+                                            <button mat-raised-button color="primary" (click)="showCreateDataCustomer()">Edit
+                                                date</button>
+                                        </div>
+                                        <table class="table" *ngIf="showCreateDataCustomerForm">
+                                            <tr>
+                                                <td colspan="6">
+                                                    <!-- ============================ UPDATE  DATA CUSTOMER FORM ============================ -->
+                                                    <div class="col-sm-12" style="margin:auto">
+                                                        <form #updateDataCustomer="ngForm" (ngSubmit)="onSubmitUpdateDataCustomerForm()">
+                                                            <div class="mb-3">
+                                                                <label>First Name</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.firstName"
+                                                                    #name="ngModel" name="firstName" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Last Name</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.lastName"
+                                                                    #name="ngModel" name="lastName" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Email</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.email"
+                                                                    #name="ngModel" name="email" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Username</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.userName"
+                                                                    #name="ngModel" name="userName" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Password</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.password"
+                                                                    #name="ngModel" name="password" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Street</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.street"
+                                                                    #name="ngModel" name="street" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Zipcode</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.zipCode"
+                                                                    #name="ngModel" name="zipCode" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>City</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.city"
+                                                                    #name="ngModel" name="city" required>
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <label>Image</label>
+                                                                <input type="text" class="form-control" [(ngModel)]="updateUserModel.image"
+                                                                    #name="ngModel" name="image">
+                                                            </div>
+                                                            <div class="mb-3">
+                                                                <button type="submit" class="btn btn-success"
+                                                                    [disabled]="!updateDataCustomer.form.valid">Update
+                                                                </button>
+                                                            </div>
+                                                        </form>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

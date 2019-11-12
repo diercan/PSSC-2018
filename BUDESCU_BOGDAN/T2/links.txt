@@ -1,0 +1,3 @@
+https://www.dummies.com/programming/big-data/engineering/what-is-middleware/
+https://en.wikipedia.org/wiki/Publish%E2%80%93subscribe_pattern
+https://www.researchgate.net/publication/237100885_Quality_of_Service_in_PublishSubscribe_Middleware

@@ -1,0 +1,44 @@
+<div class="container demo-container" style="margin-left:100px;text-align: center">
+  <div *ngIf="sharedService.selectedProducts.length != 0" class="row">
+    <div class="col-2">
+      Name
+    </div>
+    <div class="col-2">
+      Cost
+    </div>
+    <div class="col-3">
+      Description
+    </div>
+    <div class="col-5">
+      Product Code
+    </div>
+  </div>
+  <div *ngFor="let i of sharedService.selectedProducts" class="row" style="margin-bottom: 15px;;border:1px solid #c0c0c0;">
+    <div class="col-2">
+      <h4 class="card-title">
+        <a href="#">{{sharedService.products[i].name}}</a>
+      </h4>
+    </div>
+    <div class="col-2">
+      {{sharedService.products[i].cost}}
+    </div>
+    <div class="col-3">
+      {{sharedService.products[i].description}}
+    </div>
+    <div class="col-5">
+      {{sharedService.products[i].id}}
+    </div>
+  </div>
+  <div class="row" *ngIf="sharedService.selectedProducts.length != 0">
+    <div class="col-5"></div>
+    <div class="col-2">
+      <button class="btn btn-primary" style="margin: auto;">
+        Checkout
+      </button>
+    </div>
+    <div class="col-5"></div>
+  </div>
+  <div style="text-align:center;margin-top:40px" *ngIf="sharedService.selectedProducts.length == 0">
+    No products in bag.
+  </div>
+</div>
