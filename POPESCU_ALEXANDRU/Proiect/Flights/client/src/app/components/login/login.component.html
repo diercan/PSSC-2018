@@ -1,0 +1,16 @@
+<div class="container">
+  <h4>Authentication</h4>
+
+  <hr>
+
+  <form #loginForm="ngForm" (submit)="verifyAccount()" class="col-6 mx-auto">
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username" class="form-control" ngModel>
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" class="form-control" ngModel>
+
+    <div class="form-group col-4 mx-auto">
+      <button class="btn btn-primary col-12" type="submit" style="margin-top: 15px">Log In</button>
+    </div>
+  </form>
+</div>

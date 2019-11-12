@@ -1,0 +1,26 @@
+<div class="container">
+  <h4>Registration</h4>
+
+  <hr>
+
+  <form #registerForm="ngForm" (submit)="registerAccount()" class="col-6 mx-auto">
+    <label for="username">Username:</label>
+    <input id="username" type="text" name="username" class="form-control" ngModel minlength="3" required>
+
+    <label for="password">Password:</label>
+    <input id="password" type="password" name="password" class="form-control" minlength="3" required ngModel>
+
+    <label for="email">Email:</label>
+    <input id="email" type="email" name="email" class="form-control" minlength="3" required ngModel>
+
+    <label for="firstName">First Name:</label>
+    <input id="firstName" type="text" name="firstName" class="form-control" minlength="3" required ngModel>
+
+    <label for="lastName">Last Name:</label>
+    <input id="lastName" type="text" name="lastName" class="form-control" minlength="3" required ngModel>
+
+    <div class="form-group col-4 mx-auto">
+      <button class="btn btn-primary col-12" type="submit" style="margin-top: 15px">Sign Up</button>
+    </div>
+  </form>
+</div>

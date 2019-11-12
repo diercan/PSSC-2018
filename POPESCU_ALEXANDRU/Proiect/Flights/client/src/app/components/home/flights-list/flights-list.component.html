@@ -1,0 +1,20 @@
+<table class="table">
+  <thead class="thead-dark">
+  <tr>
+    <th scope="col">Departure</th>
+    <th scope="col">Arrival</th>
+    <th scope="col">Date</th>
+    <th scope="col">Total Seats</th>
+    <th scope="col" *ngIf="user?.role == 'ADMIN'"></th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let flight of flights" (click)="createBooking(flight.id)" [class]="user?.role == 'CUSTOMER' ? 'clickable' : ''">
+    <td>{{ flight.fromCity }}</td>
+    <td>{{ flight.toCity }}</td>
+    <td>{{ flight.time | date:'medium' }}</td>
+    <td>{{ flight.seatsTaken }} / {{ flight.airplane.availableSeats }}</td>
+    <td scope="col" *ngIf="user?.role == 'ADMIN'" (click)="removeFlight(flight.id)">&#10005;</td>
+  </tr>
+  </tbody>
+</table>

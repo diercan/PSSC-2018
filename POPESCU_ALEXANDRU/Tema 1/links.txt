@@ -1,0 +1,3 @@
+https://ro.wikipedia.org/wiki/Model-view-controller
+https://medium.com/@socraticsol/why-mvc-architecture-e833e28e0c76
+https://www.programering.com/a/MzMxETNwATk.html

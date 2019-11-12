@@ -1,0 +1,22 @@
+<div class="container">
+  <h4>New Flight</h4>
+  <p *ngIf="!!flight"><span [class]="flight.allEmailsSent ? 'complete' : ''">{{ flight.allEmailsSent ? 'Sent' : 'Sending' }}</span> emails to all users... [ {{ flight.sentEmails }} ]</p>
+  <hr>
+
+  <form #flightForm="ngForm" (submit)="createFlight()" class="col-6 mx-auto">
+    <label for="fromCity">From City:</label>
+    <input id="fromCity" type="text" name="fromCity" class="form-control" ngModel>
+    <label for="toCity">To City:</label>
+    <input id="toCity" type="text" name="toCity" class="form-control" ngModel>
+    <label for="time">Date:</label>
+    <input id="time" type="datetime-local" name="time" class="form-control" ngModel>
+    <label for="airplaneId">Airplane:</label>
+    <select id="airplaneId" name="airplaneId" class="form-control" ngModel>
+      <option *ngFor="let airplane of airplanes" [value]="airplane.id">{{ airplane.id }}</option>
+    </select>
+
+    <div class="form-group col-4 mx-auto">
+      <button class="btn btn-primary col-12" type="submit" style="margin-top: 15px">Create</button>
+    </div>
+  </form>
+</div>
