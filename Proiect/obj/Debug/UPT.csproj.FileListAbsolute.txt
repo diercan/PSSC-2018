@@ -1,0 +1,154 @@
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\ApplicationInsights.config
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\csc.exe
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\csc.exe.config
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\csc.rsp
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\csi.exe
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\csi.rsp
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.CSharp.Core.targets
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.AppContext.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.Collections.Immutable.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.Diagnostics.StackTrace.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.IO.FileSystem.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\System.Reflection.Metadata.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\vbc.exe
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\vbc.exe.config
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\vbc.rsp
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\VBCSCompiler.exe
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\roslyn\VBCSCompiler.exe.config
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\UPT.dll.config
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\UPT.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\UPT.pdb
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Antlr3.Runtime.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\EntityFramework.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\EntityFramework.SqlServer.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.Agent.Intercept.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.DependencyCollector.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.PerfCounterCollector.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.Web.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.WindowsServer.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.ApplicationInsights.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.Web.Infrastructure.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Newtonsoft.Json.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Helpers.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Mvc.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Optimization.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Razor.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.Deployment.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.Razor.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\WebGrease.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\EntityFramework.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\EntityFramework.SqlServer.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Helpers.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Mvc.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Optimization.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.Razor.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.Deployment.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\System.Web.WebPages.Razor.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Antlr3.Runtime.pdb
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Newtonsoft.Json.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.ApplicationInsights.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.DependencyCollector.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.ServerTelemetryChannel.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.WindowsServer.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\bin\Microsoft.AI.Web.xml
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\obj\Debug\UPT.Migrations.InitialCreate.resources
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\obj\Debug\UPT.csproj.GenerateResource.Cache
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\obj\Debug\UPT.dll
+c:\users\criss\onedrive\documents\visual studio 2017\Projects\UPT\UPT\obj\Debug\UPT.pdb
+C:\Users\criss\OneDrive\documents\visual studio 2017\Projects\UPT\UPT\obj\Debug\UPT.Migrations.ComplexDataModel.resources
+R:\FACULTATE\An4\UPT\UPT\bin\ApplicationInsights.config
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\csc.exe
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\csc.exe.config
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\csc.rsp
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\csi.exe
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\csi.rsp
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.CSharp.Core.targets
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\Microsoft.VisualBasic.Core.targets
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.AppContext.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.Collections.Immutable.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.Diagnostics.StackTrace.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.IO.FileSystem.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.IO.FileSystem.Primitives.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\System.Reflection.Metadata.dll
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\vbc.exe
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\vbc.exe.config
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\vbc.rsp
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\VBCSCompiler.exe
+R:\FACULTATE\An4\UPT\UPT\bin\roslyn\VBCSCompiler.exe.config
+R:\FACULTATE\An4\UPT\UPT\bin\UPT.dll.config
+R:\FACULTATE\An4\UPT\UPT\bin\UPT.dll
+R:\FACULTATE\An4\UPT\UPT\bin\UPT.pdb
+R:\FACULTATE\An4\UPT\UPT\bin\Antlr3.Runtime.dll
+R:\FACULTATE\An4\UPT\UPT\bin\EntityFramework.dll
+R:\FACULTATE\An4\UPT\UPT\bin\EntityFramework.SqlServer.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.Agent.Intercept.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.DependencyCollector.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.PerfCounterCollector.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.ServerTelemetryChannel.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.Web.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.WindowsServer.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.ApplicationInsights.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.Web.Infrastructure.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Newtonsoft.Json.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Helpers.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Mvc.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Optimization.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Razor.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.Deployment.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.dll
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.Razor.dll
+R:\FACULTATE\An4\UPT\UPT\bin\WebGrease.dll
+R:\FACULTATE\An4\UPT\UPT\bin\EntityFramework.xml
+R:\FACULTATE\An4\UPT\UPT\bin\EntityFramework.SqlServer.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Helpers.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Mvc.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Optimization.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.Razor.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.Deployment.xml
+R:\FACULTATE\An4\UPT\UPT\bin\System.Web.WebPages.Razor.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Antlr3.Runtime.pdb
+R:\FACULTATE\An4\UPT\UPT\bin\Newtonsoft.Json.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.ApplicationInsights.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.DependencyCollector.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.ServerTelemetryChannel.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.WindowsServer.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.AI.Web.xml
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.csprojAssemblyReference.cache
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.Migrations.InitialCreate.resources
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.Migrations.ComplexDataModel.resources
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.csproj.GenerateResource.cache
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.csproj.CoreCompileInputs.cache
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.csproj.CopyComplete
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.dll
+R:\FACULTATE\An4\UPT\UPT\obj\Debug\UPT.pdb
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.Diagnostics.Tracing.EventSource.dll
+R:\FACULTATE\An4\UPT\UPT\bin\RabbitMQ.Client.dll
+R:\FACULTATE\An4\UPT\UPT\bin\Microsoft.Diagnostics.Tracing.EventSource.xml
+R:\FACULTATE\An4\UPT\UPT\bin\RabbitMQ.Client.xml
+R:\FACULTATE\An4\UPT\UPT\bin\Newtonsoft.Json.pdb

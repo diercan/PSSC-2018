@@ -1,0 +1,50 @@
+﻿@model UPT.Models.Profesor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Profesor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Cabinet.LocatieCabinet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Cabinet.LocatieCabinet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Nume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Prenume)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Prenume)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAngajarii)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAngajarii)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
